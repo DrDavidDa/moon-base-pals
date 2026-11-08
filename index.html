@@ -643,11 +643,56 @@ function appClick(e){const b=e.target.closest('[data-app]');if(!b)return;const a
 }
 async function exportCertificate(button){const certificateState=JSON.parse(M.serialize(state)),certificateDate=prefs.completedDate||'';const setNote=text=>{const note=document.querySelector('.cert-note');if(note)note.textContent=text;};button.disabled=true;button.textContent='Preparing…';try{await document.fonts.ready;const c=document.createElement('canvas');c.width=2100;c.height=1485;const ctx=c.getContext('2d');ctx.fillStyle='#fffaf0';ctx.fillRect(0,0,c.width,c.height);ctx.strokeStyle='#c2a15d';ctx.lineWidth=5;ctx.strokeRect(55,55,1990,1375);ctx.lineWidth=1;ctx.strokeRect(73,73,1954,1339);ctx.textAlign='center';ctx.fillStyle='#244456';const line=(text,y,size,font='Baloo')=>{ctx.font=`700 ${size}px ${font}, sans-serif`;ctx.fillText(text,1050,y);};line('MOON BASE PALS',170,32,'Nunito');line('Certificate of Achievement',290,82);line('Proudly presented to',375,30,'Nunito');let size=105;do{ctx.font=`700 ${size}px Baloo, sans-serif`;size-=2;}while(ctx.measureText(certificateState.name).width>1700&&size>30);ctx.fillText(certificateState.name,1050,520);line('JUNIOR MOON BASE EXPERT',625,38,'Nunito');line('You cared for the Moon base, solved problems,',720,34,'Nunito');line('and brought Jade home.',768,34,'Nunito');
 const earned=M.skills.filter(k=>certificateState.earned.includes(k.id));earned.forEach((k,i)=>{const x=340+i*284;ctx.beginPath();ctx.arc(x,930,63,0,Math.PI*2);ctx.fillStyle='#dce8d0';ctx.fill();ctx.strokeStyle='#9aac81';ctx.lineWidth=3;ctx.stroke();ctx.fillStyle='#244456';ctx.font='700 44px Nunito';ctx.fillText(icons[k.id],x,945);ctx.font='700 24px Nunito';ctx.fillText(k.title,x,1035);});line('I can observe. I can test. I can solve.',1140,38);line('Awarded by Team Little Hero',1240,30,'Nunito');line(certificateDate,1290,25,'Nunito');
-const rover=await new Promise((resolve,reject)=>{const im=new Image();im.onload=()=>resolve(im);im.onerror=reject;im.src=window.MoonCertificateImage;});ctx.drawImage(rover,1650,1120,230,230);ctx.textAlign='left';ctx.font='700 22px Nunito';ctx.fillText('LITTLE HERO',150,1300);
+const rover=await new Promise((resolve,reject)=>{const im=new Image();im.onload=()=>resolve(im);im.onerror=reject;im.src=window.MoonCertificateImage;});ctx.drawImage(rover,1650,1120,230,230);ctx.textAlign='left';ctx.font='700 22px Nunito';ctx.fillText('LITTLE HERO',150,1300);ctx.textAlign='center';ctx.font='700 22px Nunito';if(window.MBP_certNo&&window.MBP_certNo.no)ctx.fillText('Certificate No. '+window.MBP_certNo.no,1050,1352);
 const blob=await new Promise(resolve=>c.toBlob(resolve,'image/png'));if(!blob)throw Error('No image');const url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='Moon-Base-Pals-Certificate.png';a.click();setTimeout(()=>URL.revokeObjectURL(url),30000);setNote('Your certificate picture is ready. You can also print or save a PDF.');
 }catch(_){setNote('The picture could not be saved. Try Print / PDF to keep your certificate.');}finally{button.disabled=false;button.textContent='Save picture';}}
 document.addEventListener('visibilitychange',()=>{if(document.hidden)cancelVoice();});
 window.addEventListener('pagehide',cancelVoice);
 render();
 })();
-</script></body></html>
+<script>
+(function(){
+"use strict";
+var LS='mbp_cert_registry';
+function reg(){try{return JSON.parse(localStorage.getItem(LS)||'{}')||{}}catch(e){return{}}}
+function saveReg(r){try{localStorage.setItem(LS,JSON.stringify(r))}catch(e){}}
+function pad(n){var s=String(n);while(s.length<9)s='0'+s;return s.slice(-9)}
+function fallbackNo(){var d=new Date(),st=new Date(d.getFullYear(),0,0);var doy=Math.floor((d-st)/864e5);var mod=d.getHours()*60+d.getMinutes();return String(d.getFullYear()%100)+('00'+doy).slice(-3)+('000'+mod).slice(-4)}
+function fmtDate(){try{return new Date().toLocaleDateString('en-GB',{day:'numeric',month:'long',year:'numeric'})}catch(e){return ''}}
+function fetchNext(){return fetch('https://abacus.jasoncameron.dev/hit/mbpcert/certno',{cache:'no-store'}).then(function(r){return r.json()}).then(function(j){if(j&&typeof j.value==='number'&&j.value>0)return j.value;throw new Error('bad')})}
+function issue(name){
+  var r=reg();
+  if(r[name])return Promise.resolve(r[name]);
+  if(name==='Sun Zeyi'){var first={no:pad(1),date:'9 November 2026',first:true};r[name]=first;saveReg(r);return Promise.resolve(first);}
+  return fetchNext().then(function(v){var rec={no:pad(v),date:fmtDate()};r[name]=rec;saveReg(r);return rec;})
+    .catch(function(){var rec={no:fallbackNo(),date:fmtDate(),provisional:true};r[name]=rec;saveReg(r);return rec;});
+}
+window.MBP_issueCert=issue;
+var lastName='',busy=false;
+function tick(){
+  var page=document.querySelector('.certificate-page');
+  if(!page)return;
+  var name='';
+  try{name=(JSON.parse(localStorage.getItem('mbp_preferences_v6')||'{}').playerName)||''}catch(e){}
+  if(!name)return;
+  var card=page.querySelector('.certificate');
+  if(!card)return;
+  if(window.MBP_certNo&&window.MBP_certNo.name===name){
+    var ex=card.querySelector('#mbp-cert-no');
+    if(ex&&ex.textContent!=='Certificate No. '+window.MBP_certNo.no)ex.textContent='Certificate No. '+window.MBP_certNo.no;
+    if(!ex){
+      var nameEl=card.querySelector('.certificate-name');
+      if(nameEl){var d=document.createElement('div');d.id='mbp-cert-no';d.textContent='Certificate No. '+window.MBP_certNo.no;
+        d.style.cssText='text-align:center;font:700 13px Nunito,sans-serif;color:#5a7a8a;letter-spacing:1.5px;margin-top:2px;';
+        nameEl.after(d);}
+    }
+    return;
+  }
+  if(name===lastName||busy)return;
+  busy=true;
+  issue(name).then(function(rec){lastName=name;window.MBP_certNo={no:rec.no,name:name};})
+    .catch(function(){}).then(function(){busy=false;});
+}
+setInterval(tick,900);
+})();
+</script></script></body></html>
