@@ -1,0 +1,712 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#162842">
+<meta name="description" content="Moon Base Pals: an English picture-and-voice adventure. Help our little rover Jade.">
+<title>Moon Base Pals · Let’s help Jade!</title>
+<style>@font-face{font-family:Baloo;src:url('assets/fonts/Baloo2-800.woff2')}@font-face{font-family:Nunito;src:url('assets/fonts/Nunito-700.woff2')}
+:root{--ink:#243e56;--paper:#fffaf0;--cream:#f5efdf;--gold:#f3c863}*{box-sizing:border-box}html{background:var(--cream);color:var(--ink)}body{margin:0;font:700 22px/1.4 Nunito,sans-serif}button,input{font:inherit}button{color:inherit;cursor:pointer;touch-action:manipulation;border:0}button:disabled{cursor:default}button:focus-visible,a:focus-visible,input:focus-visible{outline:4px solid #2465a0;outline-offset:5px}button:active:not(:disabled){transform:translateY(2px)}a{color:#275b80}img{display:block;max-width:100%;object-fit:contain}h1,h2,h3,p{margin:0}h1,h2,h3{font:800 38px/1.15 Baloo,Nunito,sans-serif}h2{font-size:32px}h3{font-size:27px}small{font-size:16px}.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)}.skip{position:fixed;top:-100px;left:20px;background:white;padding:12px;z-index:99}.skip:focus{top:10px}
+.header{max-width:1320px;margin:auto;padding:14px 32px;display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:88px}.brand{display:flex;align-items:center;gap:12px;background:none;padding:0;font-family:Baloo;font-size:28px;min-height:56px}.brand-moon{background:#e5b956;color:var(--paper);border-radius:50%;width:47px;height:47px;font:800 44px/48px Baloo}.header nav{display:flex;gap:12px}.quiet,.text-btn,.close{min-height:56px;min-width:56px;background:transparent;padding:12px 18px;border-radius:18px;font-size:19px}.quiet{border:1px solid #d6d3c3;background:#fffaf080}.quiet:hover,.text-btn:hover{background:#e7deca}.close{background:#eee7d9;font-size:36px;padding:0;flex:none}.btn{display:inline-flex;align-items:center;justify-content:center;gap:22px;min-height:64px;padding:14px 34px;background:var(--gold);border-radius:24px;border:2px solid #e0b152;box-shadow:0 5px 0 #c79b49;font:800 27px/1.2 Baloo}.btn:hover{background:#ffda79}.page{max-width:1200px;padding:0 28px 28px;margin:auto}.home{padding-top:16px}.cover{display:grid;grid-template-columns:43% 57%;min-height:525px;background:var(--paper);border-radius:40px;border:1px solid #e4ddca;box-shadow:0 16px 40px #424b3910;overflow:hidden}.cover-copy{padding:56px 0 50px 58px;z-index:1}.overline{font-size:18px;color:#59756f;letter-spacing:.06em;margin-bottom:22px}.cover h1{font-size:clamp(56px,6vw,88px);line-height:1.02;color:#274e70}.cover h1 em{font-style:normal;color:#658962}.cover-copy>p:not(.overline){font-size:23px;margin:22px 0 30px;max-width:280px}.play-button{min-width:240px}.cover-note{display:block;font-size:16px;color:#6f796d;margin-top:20px}.cover-art{position:relative;background:#deebe1;border-radius:48% 0 0 44%;min-height:460px;display:flex;align-items:center;justify-content:center}.cover-art:before{content:'';position:absolute;width:75%;aspect-ratio:1;border:1px dashed #a4bea3;border-radius:50%;top:9%;left:12%}.cover-jade{width:96%;transform:rotate(-5deg);margin-top:-40px}.cover-jade .repair-status{display:none}.cover-pal{position:absolute;bottom:18px;left:6%;display:flex;align-items:center;gap:10px}.cover-pal img{width:108px;height:108px;object-fit:cover;border-radius:50%;border:6px solid var(--paper)}.cover-pal span{background:var(--paper);font-size:21px;padding:12px 20px;border-radius:22px 22px 22px 3px;box-shadow:0 3px 0 #a8bfaa}.moon-sticker{position:absolute;top:35px;right:35px;font-size:40px;color:#b58a35}.home-foot{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:16px 4px;color:#66746f;font-size:15px}.home-foot .text-btn{font-size:16px}
+.chapter-line{display:flex;align-items:center;gap:20px;min-height:72px}.chapter-line>span{font-size:19px;color:#657869;white-space:nowrap}.chapter-line h1{font-size:30px;flex:1}.chapter-line .text-btn{font-size:17px;padding:10px}.storybook{background:var(--paper);border-radius:32px;border:1px solid #dfd8c5;box-shadow:0 10px 30px #43482e0b;overflow:hidden}.story-scene{height:360px;position:relative;display:flex;align-items:center;justify-content:center;background:#faf7ef}.hero-prop{height:100%;width:70%;mix-blend-mode:multiply}.room-picture{width:100%;height:100%;object-fit:cover;object-position:50% 65%}.scene-jade{background:#dfebe0}.scene-jade>.jade{height:100%;width:460px}.sunlight{position:absolute;right:18%;top:35px;color:#d1a642;font-size:60px}.story-bottom{border-top:1px solid #e4ddca;padding:22px 36px 28px}.pal-line{display:flex;align-items:center;gap:22px;max-width:920px;margin:auto}.pal-face{height:88px;width:88px;flex:none;border-radius:50%;object-fit:cover;border:4px solid #e5decf}.pal-line p{font-size:25px;line-height:1.4;flex:1;max-width:660px}.listen{background:#e6eee4;min-width:60px;min-height:60px;border-radius:50%;font-size:22px;border:1px solid #bacbb8;flex:none}.primary-row{display:flex;flex-direction:column;align-items:center;margin-top:18px;gap:14px}.summary-actions{display:flex;gap:16px;align-items:center;justify-content:center}.upkeep{font-size:18px;color:#68766c}.jade{position:relative;max-width:100%;isolation:isolate}.jade-image{width:100%;height:100%}.repair-status{position:absolute;transform:translate(-50%,-50%);display:grid;place-items:center;width:26px;height:26px;border:3px solid var(--paper);border-radius:50%;font-size:17px;line-height:1;background:#9d9582;color:white;box-shadow:0 2px 5px #25453522}.repair-status.done{background:#4c8061}.part-art{display:block;background-image:url('assets/story-v5/parts.png');background-size:300% 200%;background-position:var(--px) var(--py);width:190px;aspect-ratio:2/3;max-width:100%;background-repeat:no-repeat;mix-blend-mode:multiply}
+.plan-surface{padding:24px 38px 30px}.meters{display:flex;gap:22px;max-width:690px;margin:0 auto 22px}.resource{flex:1;display:grid;grid-template-columns:1fr auto;gap:7px 12px;font-size:18px}.resource b{font-size:23px}.resource small{font-size:14px;color:#717868}.segments{display:flex;gap:3px;grid-column:1/-1}.segments i{height:8px;flex:1;background:#e3dece;border-radius:3px}.power .on{background:#bd8c25}.water .on{background:#4884a5}.food .on{background:#639065}.picture-choices{display:grid;grid-template-columns:1fr 1fr;gap:26px;max-width:800px;margin:auto}.choice-card{background:#fffdf7;border:2px solid #d4ceb8;border-radius:26px;padding:12px 18px 18px;display:flex;flex-direction:column;align-items:center;gap:8px;box-shadow:0 5px 0 #d5cfbd;min-width:0}.choice-card:hover:not(:disabled){border-color:#c3912f;box-shadow:0 5px 0 #ba913d;background:#fff4d8}.choice-card:disabled{opacity:.55}.choice-card>strong{font:800 25px/1.15 Baloo}.choice-picture,.choice-card>.part-art{height:154px;width:154px;object-fit:contain;mix-blend-mode:multiply}.choice-card>.part-art{width:103px}.pair-pals{display:flex;align-items:center;height:154px;justify-content:center}.pair-pals img{width:94px;height:94px;object-fit:cover;border-radius:50%;border:5px solid var(--paper)}.pair-pals img+img{margin-left:-12px}.trade{display:flex;flex-wrap:wrap;gap:6px 12px;justify-content:center}.delta{font-size:19px;white-space:nowrap;padding:4px 6px;border-radius:8px;color:#4d6655}.delta.cost{color:#825b34}.delta small{font-size:13px}.plan-surface>.btn{display:flex;margin:24px auto 0}
+.workbench{padding:18px 24px 0}.action-picture{position:relative;min-height:330px;max-width:800px;margin:auto;display:flex;align-items:center;justify-content:center;padding-bottom:70px}.action-prop{height:270px;width:380px;object-fit:contain;mix-blend-mode:multiply}.action-part{height:270px;width:180px}.action-jade{width:340px;height:290px}.bench-target{position:absolute;left:50%;bottom:8px;transform:translateX(-50%);background:var(--gold);border:3px solid #bb8f34;border-radius:24px;min-height:68px;max-width:100%;width:max-content;padding:10px 22px;display:flex;align-items:center;justify-content:center;gap:14px;box-shadow:0 5px 0 #be9448;font-size:24px}.bench-target>span:first-child{font-size:30px}.bench-target b{font:800 26px/1.2 Baloo}.bench-target:active:not(:disabled){transform:translate(-50%,2px)}.tap-hand{font-size:30px}.guided-target{outline:6px solid #f5d97f;outline-offset:8px}.done-token{position:absolute;top:10px;left:10px;background:#e0eddb;color:#3c6646;border:1px solid #b8cdb0;padding:10px 15px;border-radius:16px;font-size:18px;max-width:300px}.step-footer{display:flex;align-items:center;justify-content:center;gap:16px;min-height:64px;padding:0 10px;color:#6d7768;font-size:17px}.step-footer .text-btn{margin-left:auto}.step-dots{display:flex;gap:8px}.step-dots i{width:22px;height:22px;border-radius:50%;background:#e0dbcb;border:2px solid #d0c6b0;font:normal 15px/19px Nunito;text-align:center}.step-dots .done{background:#628065;color:white;border-color:#628065}.step-dots .now{background:#f1cd76;border-color:#bf963e}.dust-spots{position:absolute;top:30px;left:calc(50% - 90px);width:160px;height:190px;pointer-events:none;transform:rotate(-10deg)}.dust-spots i{position:absolute;width:45px;height:35px;border-radius:50%;background:#a79779aa;filter:blur(4px)}.dust-spots i:nth-child(1){left:15%;top:10%}.dust-spots i:nth-child(2){left:50%;top:30%}.dust-spots i:nth-child(3){left:10%;top:55%}.dust-spots i:nth-child(4){left:55%;top:75%}.dust-spots i:nth-child(5){left:40%;top:50%}
+.question-surface{text-align:center;padding:24px 40px 12px}.question-surface h2{font-size:30px;margin-bottom:20px}.answer-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;max-width:750px;margin:auto}.answer{background:#fffdf8;border:2px solid #d6cdb7;border-radius:24px;min-height:190px;padding:15px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;min-width:0;box-shadow:0 4px 0 #d5cdb8;font-size:23px}.answer:hover{border-color:#b88b31;background:#fff1cb}.answer-picture,.panel-picture{height:120px;width:160px;object-fit:contain;mix-blend-mode:multiply}.panel-picture{position:relative;display:block}.panel-picture img{height:100%;margin:auto}.panel-picture.covered:after{content:'';position:absolute;width:56px;height:68px;background:#6c695a;left:56px;top:5px;transform:rotate(-17deg);border-radius:5px}.answer>.part-art{height:120px;width:80px}.answer-symbol{height:120px;font-size:66px;display:grid;place-items:center}.answer.hinted{border:4px solid #6e9460;background:#eef5dc}.hint-mark{color:#46623c;font-size:18px}
+.repair-bench{position:relative;display:flex;justify-content:center;align-items:center;min-height:370px;background:#e6eee2;padding:10px 35px;gap:32px}.repair-rover{position:relative;width:380px;height:350px}.repair-rover>.jade{width:100%;height:100%}.mount-point{position:absolute;transform:translate(-50%,-50%);height:64px;width:64px;border-radius:50%;border:4px solid var(--paper);background:#f5c967;font-size:43px;box-shadow:0 0 0 5px #bb9141;line-height:48px}.mount-point:active:not(:disabled){transform:translate(-50%,-48%)}.part-to-fit{display:flex;flex-direction:column;align-items:center;background:var(--paper);padding:12px 22px 20px;border-radius:26px;width:220px}.part-to-fit .part-art{width:100px;height:150px}.part-to-fit strong{font:800 27px Baloo}.part-to-fit>span:last-child{font-size:18px}.summary-surface{text-align:center;padding:14px 30px 20px}.reward-art{height:180px;width:200px;margin:auto;position:relative;display:flex;align-items:center;justify-content:center}.reward-art .part-art{height:180px;width:120px}.reward-art .choice-picture{height:180px;width:190px}.reward-check{position:absolute;right:0;bottom:12px;background:#5b8563;border:5px solid var(--paper);border-radius:50%;height:58px;width:58px;display:grid;place-items:center;color:white;font-size:30px}.summary-surface h2{margin:4px 0 12px;font-size:39px}.summary-surface>p{font-size:19px;margin-top:12px}.drive-world{height:350px;position:relative;overflow:hidden;background:#222c38}.drive-background{height:100%;width:100%;object-fit:cover;opacity:.85}.route-track{position:absolute;bottom:80px;width:90%;left:5%;border-top:5px dashed #fff0bb;transform:rotate(-5deg)}.route-rover{position:absolute;width:220px;bottom:65px;transition:left .6s ease}.route-stop{position:absolute;bottom:18px;right:5%;z-index:2}.drive-scene .step-footer{min-height:56px}.reunion{text-align:center;padding-top:20px}.reunion h1{font-size:52px}.reunion>p{margin-top:10px}.reunion-art{max-width:650px;margin:10px auto 24px;background:#deeadc;border-radius:50%;padding:5px 40px 25px}.reunion-art>.jade{max-width:300px;margin:auto}.reunion-pals{display:flex;justify-content:center;gap:14px}.reunion-pals img{width:90px;height:90px;object-fit:cover;border:5px solid var(--paper);border-radius:50%}.reunion>.text-btn{display:block;margin:15px auto}.certificate{text-align:center;background:var(--paper);border:4px double #c4b57a;border-radius:24px;padding:30px}.certificate h1{font-size:46px;margin:15px}.certificate h2{color:#56714b;font-size:36px}.certificate-jade{width:210px;margin:8px auto}.cert-stats{display:flex;justify-content:center;gap:24px;font-size:20px;margin:20px 0}.cert-crew{display:flex;justify-content:center;gap:14px;margin:15px}.cert-crew img{width:70px;height:70px;object-fit:cover;border-radius:50%}.cert-sign{font-size:16px}.cert-actions{display:flex;justify-content:center;gap:18px;margin-top:20px}
+.overlay-backdrop{position:fixed;inset:0;background:#132d42a6;backdrop-filter:blur(8px);z-index:20;display:flex;justify-content:center;align-items:center;padding:22px}.modal{background:var(--paper);border-radius:30px;padding:28px;max-width:650px;max-height:calc(100dvh - 44px);overflow:auto;width:100%;box-shadow:0 25px 70px #132d4244}.modal-top{display:flex;align-items:center;gap:22px;margin-bottom:24px}.modal-top h2{flex:1;font-size:32px}.modal>p{font-size:21px;margin:20px 0}.modal>.btn,.modal>.text-btn{display:flex;margin:20px auto 0}.modal-pal{width:140px;height:140px;border-radius:50%;object-fit:cover;margin:auto}.menu-options{display:grid;gap:12px;grid-template-columns:1fr 1fr}.menu-options>.btn{grid-column:1/-1}.modal label{display:block;font-size:20px;margin-top:20px}.modal input{width:100%;min-height:56px;border:2px solid #c6c6ae;border-radius:14px;padding:10px 15px;background:white;color:var(--ink)}.modal details{font-size:18px;border-top:1px solid #d6cfbd;margin:14px 0;padding-top:12px}.modal details p{margin:14px 0}.modal summary{cursor:pointer;min-height:56px;padding:12px 0}.modal li{margin:12px 0}.repair-list{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.repair-list>span{display:flex;align-items:center;flex-direction:column}.repair-list .part-art{width:60px;height:90px}.repair-list b{font-size:18px}.repair-list small{font-size:15px;color:#55705b}.notification,.save-warning{max-width:1100px;margin:12px auto;padding:14px 20px;background:#fff0ca;border:1px solid #d5b866;border-radius:14px;font-size:17px}.toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#203d52;color:white;padding:10px 22px;border-radius:20px;z-index:30;font-size:20px;max-width:calc(100% - 24px);text-align:center}.toast:empty{display:none}
+@media(max-width:700px){body{font-size:20px}.header{padding:10px 16px;min-height:76px;gap:8px}.brand{font-size:22px;gap:8px}.brand-moon{width:34px;height:34px;line-height:35px;font-size:32px}.header nav{gap:6px}.header .quiet{font-size:18px;padding:10px 12px}.header nav .quiet span{display:none}.page{padding:0 14px 20px}.home{padding-top:8px}.cover{grid-template-columns:1fr;border-radius:28px}.cover-copy{padding:28px 25px 18px;text-align:center;order:2}.cover h1{font-size:49px;line-height:1.05}.cover h1 br{display:none}.cover h1 em{margin-left:9px}.overline{font-size:15px;margin-bottom:10px}.cover-copy>p:not(.overline){font-size:21px;max-width:none;margin:12px 0 20px}.cover-art{order:1;min-height:280px;height:280px;border-radius:0 0 42% 42%}.cover-jade{width:290px;height:270px;margin-top:-10px}.cover-pal{bottom:0;left:10%}.cover-pal img{height:68px;width:68px;border-width:4px}.cover-pal span{font-size:17px;padding:8px 13px}.cover-note{margin:16px 0 0}.home-foot{font-size:12px;padding:10px 0;gap:0}.home-foot .text-btn{font-size:14px;padding:10px}.chapter-line{gap:8px;min-height:84px;flex-wrap:wrap;padding:8px 0 12px}.chapter-line>span{font-size:16px;order:0}.chapter-line h1{font-size:26px;order:2;flex-basis:100%}.chapter-line .text-btn{order:1;margin-left:auto;font-size:15px;padding:8px}.storybook{border-radius:24px}.story-scene{height:260px}.hero-prop{width:90%}.scene-jade>.jade{width:290px}.story-bottom{padding:18px 16px 22px}.pal-line{gap:12px}.pal-face{width:58px;height:58px;border-width:3px}.pal-line p{font-size:21px}.listen{min-width:56px;min-height:56px;font-size:20px}.btn{font-size:24px;padding:12px 22px;min-height:62px}.plan-surface{padding:20px 13px}.meters{gap:12px;margin-bottom:20px}.resource{gap:4px;font-size:14px;grid-template-columns:1fr}.resource b{font-size:21px}.segments{gap:2px}.segments i{height:6px}.picture-choices{gap:12px}.choice-card{padding:8px 8px 14px;gap:9px;border-radius:19px}.choice-picture{height:110px;width:110px}.choice-card>.part-art{height:110px;width:74px}.choice-card>strong{font-size:22px;min-height:50px;display:flex;align-items:center}.trade{gap:1px 6px}.delta{font-size:17px;padding:3px 0}.pair-pals{height:110px}.pair-pals img{width:65px;height:65px;border-width:3px}.workbench{padding:10px 10px 0}.action-picture{min-height:300px;padding-bottom:78px}.action-prop{height:220px;width:280px}.action-part{height:220px;width:147px}.action-jade{width:250px;height:230px}.bench-target{padding:10px 12px;width:calc(100% - 12px);gap:9px;min-height:70px}.bench-target b{font-size:23px}.bench-target>span:first-child{font-size:24px}.tap-hand{font-size:25px}.done-token{font-size:15px;padding:7px 10px;max-width:220px;top:0;left:0}.step-footer{gap:9px;padding:0 3px;font-size:15px}.step-footer .text-btn{font-size:16px;padding:8px}.step-dots{gap:5px}.step-dots i{height:18px;width:18px;font-size:12px;line-height:14px}.question-surface{padding:22px 13px 10px}.question-surface h2{font-size:26px}.answer-grid{gap:12px}.answer{padding:10px;font-size:21px;min-height:210px;border-radius:19px}.answer-picture,.panel-picture{width:120px;height:105px}.panel-picture.covered:after{left:40px;width:50px;height:60px}.answer-symbol{height:105px;font-size:57px}.answer>.part-art{height:105px;width:70px}.repair-bench{min-height:320px;gap:0;padding:10px;flex-wrap:wrap}.repair-rover{width:270px;height:260px}.part-to-fit{flex-direction:row;gap:10px;width:auto;flex-wrap:wrap;justify-content:center;padding:8px 15px}.part-to-fit .part-art{width:36px;height:54px}.part-to-fit strong{font-size:22px}.part-to-fit>span:last-child{font-size:16px}.mount-point{width:56px;height:56px;line-height:40px;font-size:36px}.summary-surface{padding:10px 15px 14px}.reward-art{height:145px}.reward-art .part-art{height:145px;width:97px}.reward-art .choice-picture{height:145px}.summary-surface h2{font-size:34px}.summary-actions{gap:8px;flex-wrap:wrap}.summary-actions .text-btn{font-size:18px}.upkeep{font-size:16px;text-align:center}.drive-world{height:300px}.route-rover{width:150px;bottom:100px}.route-stop{right:5%;left:5%;font-size:23px}.reunion h1{font-size:42px}.reunion-art{padding:10px}.reunion-pals{gap:4px}.reunion-pals img{width:64px;height:64px;border-width:3px}.overlay-backdrop{padding:12px}.modal{padding:20px;max-height:calc(100dvh - 24px);border-radius:24px}.modal-top{gap:12px}.modal-top h2{font-size:28px}.modal>p{font-size:20px}.menu-options{grid-template-columns:1fr}.repair-list{gap:8px}.repair-list b{font-size:15px}.certificate{padding:20px 15px}.certificate h1{font-size:36px}.certificate h2{font-size:28px}.cert-stats{gap:10px;flex-wrap:wrap;font-size:17px}.cert-crew{gap:7px}.cert-crew img{width:52px;height:52px}}
+@media(max-width:360px){.brand{font-size:19px}.brand-moon{display:none}.pal-line{flex-wrap:wrap;gap:10px}.pal-line p{flex-basis:calc(100% - 80px)}.listen{margin-left:auto}.home-foot{flex-direction:column;padding-top:15px}.chapter-line h1{font-size:25px}.choice-card>strong{font-size:20px}.choice-picture{width:100px}.answer{font-size:19px}.answer-picture,.panel-picture{width:100px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+@page{size:A4;margin:12mm}@media print{html,body{background:white;font-size:18px}.header,.world-bg,.star-grain,.cert-actions,.toast,.skip,.overlay-backdrop{display:none!important}.certificate-wrap .certificate{display:block!important;border:3px double #9a853f;box-shadow:none;break-inside:avoid}.certificate-wrap{padding:0;max-width:100%}.certificate{padding:18px}.certificate-jade{width:180px}.cert-crew img{width:60px;height:60px}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to game</a>
+<div id="app"></div>
+<div id="announcer" class="sr-only" role="status" aria-live="polite" aria-atomic="true"></div>
+<noscript><main class="noscript">Enable JavaScript to play Moon Base Pals.</main></noscript>
+<script>/* Moon Base Pals v4: deterministic rules and bilingual mission content. No DOM or clock. */
+(function (root, factory) {
+  'use strict';
+  var api = factory();
+  if (typeof module === 'object' && module.exports) module.exports = api;
+  if (root) root.MoonModel = api;
+})(typeof window !== 'undefined' ? window : null, function () {
+  'use strict';
+  var RESOURCE_KEYS = ['power', 'water', 'food'];
+  var T = function (zh, en) { return { zh: zh, en: en }; };
+  var SOURCES = {
+    dust: { label: 'NASA · Weather on the Moon', url: 'https://www.nasa.gov/general/is-there-weather-on-the-moon-we-asked-a-nasa-scientist-episode-34/' },
+    solar: { label: 'NASA · Solar power and solar sails', url: 'https://science.nasa.gov/sun/how-nasa-uses-and-improves-solar-power/' },
+    water: { label: 'NASA · ISS water recovery', url: 'https://www.nasa.gov/missions/station/iss-research/nasa-achieves-water-recovery-milestone-on-international-space-station/' },
+    garden: { label: 'NASA · Growing plants in space', url: 'https://www.nasa.gov/exploration-research-and-technology/growing-plants-in-space/' },
+    shield: { label: 'NASA · Radiation protection at the Moon', url: 'https://science.nasa.gov/science-research/heliophysics/how-nasa-will-protect-astronauts-from-space-radiation-at-the-moon/' },
+    regolith: { label: 'NASA · Lunar regolith testbeds', url: 'https://www.nasa.gov/centers-and-facilities/ames/the-lunar-lab-and-regolith-testbeds/' },
+    night: { label: 'NASA · Powering exploration on the Moon', url: 'https://www.nasa.gov/centers-and-facilities/marshall/nasa-seeks-ideas-from-the-public-for-powering-exploration-on-the-moon/' }
+  };
+  var PARTS = [
+    { id: 'battery', name: T('电池', 'Battery'), icon: '🔋', day: 2 },
+    { id: 'wheels', name: T('车轮', 'Wheels'), icon: '🛞', day: 4 },
+    { id: 'antenna', name: T('天线', 'Antenna'), icon: '📡', day: 6 },
+    { id: 'controller', name: T('控制器', 'Controller'), icon: '🎛️', day: 8 },
+    { id: 'panel', name: T('太阳能板', 'Solar panel'), icon: '☀️', day: 10 },
+    { id: 'insulation', name: T('保温层', 'Insulation'), icon: '🧥', day: 12 }
+  ];
+  function plan(day, suffix, zh, en, icon, eff, rzh, ren, steps) {
+    return { id: 'd' + day + '-' + suffix, title: T(zh, en), icon: icon,
+      eff: { power: eff[0], water: eff[1], food: eff[2] }, result: T(rzh, ren),
+      steps: steps.map(function (s, i) { return { id: 'd' + day + '-' + suffix + '-' + (i + 1), label: T(s[0], s[1]), icon: s[2] }; }) };
+  }
+  function mission(day, title, goal, brief, pal, location, fact, source, question, choices, plans) {
+    var correct = (day - 1) % 2;
+    return { day: day, title: T(title[0], title[1]), goal: T(goal[0], goal[1]), brief: T(brief[0], brief[1]), pal: pal, location: location,
+      fact: T(fact[0], fact[1]), source: SOURCES[source], question: T(question[0], question[1]),
+      answers: choices.map(function (c, i) { return { id: i ? 'b' : 'a', label: T(c[0], c[1]), icon: c[2], correct: i === correct, explain: T(c[3], c[4]) }; }),
+      plans: plans, part: (PARTS.find(function (p) { return p.day === day; }) || {}).id || null };
+  }
+  var MISSIONS = [
+    mission(1, ['让基地亮起来', 'Light up the base'], ['给工作台供电，找到 Jade。', 'Power the workbench and find Jade.'],
+      ['Crawler 找到了没电的月球车 Jade。先让基地工作台亮起来，我们才能修车。', 'Crawler found Jade, a rover with no power. Light the base workbench so we can repair her.'], 'crawler', 'solar',
+      ['太阳能板把阳光变成电。月球没有能帮我们吹走尘土的空气风。这里清板使用的是训练用刷具。', 'Solar panels turn sunlight into electricity. The Moon has no air wind to clean them for us. Our brush is a training tool.'], 'solar',
+      ['明亮的阳光照到哪块板，发电更好？', 'Which panel can collect more sunlight?'],
+      [['干净的板', 'A clean panel', '☀️', '对！光能照到干净的板。', 'Yes! Light can reach the clean panel.'], ['盖住的板', 'A covered panel', '⬛', '盖住板会挡光。先让阳光照到板上。', 'A cover blocks light. Let sunlight reach the panel first.']],
+      [plan(1,'a','清洁发电板','Brush the panel','🧹',[5,-1,0],'维修伙伴喝了水；清板后，工作台亮了！','Our helper uses drinking water; the cleaned panel lights the bench!', [['断开连接，给伙伴备水','Disconnect and pack drinking water','💧'],['刷掉覆盖的月尘','Brush off the dust','🧹'],['重新接上工作台','Connect the workbench','💡']]),
+       plan(1,'b','搬来备用电池','Bring a spare battery','🔋',[3,0,-1],'电池点亮工作台；搬运伙伴吃掉一份口粮。','The battery lights the bench; our helper uses one ration.', [['拿起备用电池','Pick up the spare battery','🔋'],['送一份搬运口粮','Pack one helper ration','🍱'],['插入工作台接口','Plug into the workbench','🔌']])]),
+    mission(2,['一滴也不漏','Save every drop'],['修好供水，再装上 Jade 的电池。','Restore water, then fit Jade’s battery.'],
+      ['Flyer 发现水箱接头在漏水。修好供水，修理站就能准备好 Jade 的电池。', 'Flyer spots a leaking tank connector. Restore water so the repair station can prepare Jade’s battery.'], 'flyer','water',
+      ['在国际空间站，NASA 的系统曾演示回收约 98% 的水。这是空间站成果；我们的月球水箱是简化训练。', 'NASA demonstrated about 98% water recovery on the ISS. That is an ISS result; our lunar tank is a simplified training model.'],'water',
+      ['旧水要重新饮用，应该先怎么做？','Before used water is safe to drink again, what must happen?'],
+      [['直接喝掉','Drink it straight away','🥤','旧水不能直接喝，要经过处理与检查。','Used water needs treatment and checks first.'],['处理并检查','Treat and check it','💧','对！回收系统会处理水并检查水质。','Yes! A recovery system treats water and checks its quality.']],
+      [plan(2,'a','修补接头','Seal the connector','🔧',[-1,6,0],'漏水停了，水回到储箱。','The leak stops and water returns to the tank.', [['关闭进水阀','Close the inlet valve','🚰'],['换上密封圈','Fit a seal','⭕'],['打开阀门查漏','Open and check for leaks','💧']]),
+       plan(2,'b','隔离漏口，启动回收','Isolate the leak and recycle','♻️',[-2,7,0],'漏口已隔离；多用一格电，回收了更多水。','The leak is isolated; more power recovers more water.', [['关阀，隔离漏水接头','Close the valve and isolate the leak','🚰'],['连接旁路，启动处理器','Connect the bypass and treat water','♻️'],['检查水质与接头','Check water quality and the connector','✅']])]),
+    mission(3,['温室的新叶子','New leaves'],['用水或灯光帮助温室长出食物。','Help the garden grow food with water or light.'],
+      ['Bread 发现育苗盘和一批快成熟的菜。苗盘已有少量水。选择今天的照料办法，再采收成熟叶片。', 'Bread finds seed trays and nearly mature plants. The trays already hold some water. Choose their care, then harvest mature leaves.'], 'bread','garden',
+      ['NASA 在空间站研究种植植物，学习怎样为未来探索提供新鲜食物。植物需要适量的水和光；月球农场还不是现成的事实。', 'NASA studies plant growth on the ISS to help future exploration. Plants need suitable water and light; an established lunar farm is still fiction.'],'garden',
+      ['小苗干了，哪样照料有帮助？','The seed tray is dry. What can help?'],
+      [['补充适量的水','Add a suitable amount of water','💧','对！给根部适量的水，别把小苗淹没。','Yes! Give the roots suitable water without flooding them.'],['只贴一张星星','Add only a star sticker','⭐','星星很好看，但不能代替水和光。','A star looks nice but cannot replace water and light.']],
+      [plan(3,'a','浇水采收','Water and harvest','💧',[0,-2,7],'小苗喝饱了，食物篮装满了。','The watered plants fill our food basket.', [['摸一摸干燥指示牌','Check the dry-soil marker','🌱'],['给根部慢慢浇水','Water the roots slowly','💧'],['把成熟叶片放入食物篮','Put mature leaves in the basket','🥬']]),
+       plan(3,'b','开灯养苗','Use the grow light','💡',[-2,0,4],'灯帮助小苗生长，留下水给明天。','The light helps the plants while saving water for tomorrow.', [['把育苗盘移到灯下','Move the tray under the light','🌱'],['打开种植灯','Turn on the grow light','💡'],['收好已经成熟的叶片','Gather the mature leaves','🥬']])]),
+    mission(4,['让车轮滚起来','Wheels that roll'],['为 Jade 准备车轮和试车道。','Prepare Jade’s wheels and a test lane.'],
+      ['Jade 的旧轮子卡在月尘中。清理测试区，选一种搬运办法，再装上新轮子。', 'Jade’s old wheels are stuck in dust. Clear a test lane, choose how to move the parts, then fit new wheels.'], 'crawler','jade',
+      ['月壤会影响车轮的抓地与行驶。NASA 使用月壤模拟材料测试设备；这里的大石块是慢速训练道具。', 'Lunar soil affects wheel traction and travel. NASA tests equipment with lunar-soil simulants; our big rocks are slow training props.'],'regolith',
+      ['试车道上有大石头，先怎么做？','A large rock blocks the test lane. What first?'],
+      [['闭眼开过去','Drive with eyes closed','🙈','先看清路，再移开障碍或绕路。','Check the lane and clear or avoid the obstacle first.'],['检查并清理车道','Check and clear the lane','🪨','对！先检查车道，再安全试车。','Yes! Check the lane before testing the rover.']],
+      [plan(4,'a','用升降台搬轮子','Use the lifting table','⚙️',[-2,0,0],'升降台稳稳托起 Jade，轮子就位。','The lift supports Jade while the wheels are prepared.', [['把升降台移到车底','Move the lift beneath Jade','⚙️'],['按下升起按钮','Raise the lift','⬆️'],['把四个车轮送到安装位','Bring wheels to their mounts','🛞']]),
+       plan(4,'b','伙伴一起搬','Carry together','🤝',[0,-1,-1],'伙伴合作，省下电力，喝水并补充口粮。','Teamwork saves power; helpers use water and a ration.', [['铺好轮子搬运垫','Lay down the carrying mat','🟫'],['和伙伴把轮子推到架旁','Roll wheels to the stand together','🤝'],['放好休息用水和口粮','Set out water and a ration','🍱']])]),
+    mission(5,['躲进有屏蔽的家','A shielded home'],['在预设太阳粒子演练中保护伙伴。','Protect the crew in a planned particle-event drill.'],
+      ['今天进行预设的防护演练，不是实时天气预报。Balloon 请你选好避难办法。', 'Today is a planned protection drill, not a live forecast. Balloon asks you to choose the shelter plan.'], 'balloon','shelter',
+      ['月球上的宇航员需要防护来自太空的辐射。屏蔽材料能帮助保护人；关门本身不是魔法防护罩。', 'Astronauts at the Moon need protection from space radiation. Shielding material helps protect people; a closed door alone is not a magic shield.'],'shield',
+      ['演练提醒要防护粒子，哪里更合适？','In a particle-protection drill, where should the crew go?'],
+      [['有屏蔽材料的避难舱','A shelter with shielding','🏠','对！屏蔽材料帮助减少暴露。','Yes! Shielding helps reduce exposure.'],['没有遮挡的月面','The exposed lunar surface','🌕','月面没有遮挡。去有屏蔽的避难舱。','The open surface is exposed. Go to the shielded shelter.']],
+      [plan(5,'a','启动屏蔽舱设备','Power the shelter systems','🏠',[-1,0,0],'伙伴进入屏蔽舱，设备正常。','The crew enters the shelter and its systems are ready.', [['检查屏蔽层标记','Check the shielding marker','🧱'],['打开舱内生命保障','Turn on shelter life support','💡'],['带伙伴进入屏蔽区','Guide the crew into shelter','🤝']]),
+       plan(5,'b','取消外出，原地避难','Cancel the trip and shelter','🛑',[0,-1,-1],'取消外出后，伙伴在已具备屏蔽的住舱用餐等待。','The trip is cancelled; the crew waits in the already shielded habitat.', [['把外出牌翻到暂停','Turn the outing sign to pause','🛑'],['检查住舱屏蔽标记','Check the habitat shielding','🧱'],['分好舱内用水和口粮','Share shelter water and food','🍱']])]),
+    mission(6,['接上 Jade 的声音','Give Jade a voice'],['准备供电，装上通信天线。','Prepare power and fit the antenna.'],
+      ['Flyer 找到了 Jade 的新天线。先让通信工作台有稳定电力，再把天线装好。', 'Flyer found Jade’s new antenna. Give the communications bench a stable power supply, then fit it.'], 'flyer','jade',
+      ['太阳能板发电，电池储存电。这里 Jade 的通信设备也要用电；太阳能板和用光压推进的太阳帆用途不同。', 'Solar panels generate electricity and batteries store it. Jade’s radio uses power too. A solar panel differs from a solar sail, which uses light pressure for propulsion.'],'solar',
+      ['天线电路要工作，哪个准备有用？','What helps the antenna circuit work?'],
+      [['把电源线拔掉','Unplug its power cable','🔌','拔掉电源不能让电路工作。要有电源和正确连接。','An unplugged circuit cannot run. It needs power and a proper connection.'],['检查电源连接','Check its power connection','🔋','对！检查电源，再测试设备。','Yes! Check power before testing the equipment.']],
+      [plan(6,'a','给通信台充电','Charge the radio bench','🔋',[-1,0,0],'通信台已充电，可以安装天线。','The radio bench is charged and ready for the antenna.', [['把充电线接上底座','Connect the charging lead','🔌'],['启动工作台充电','Start bench charging','🔋'],['检查电源指示灯','Check the power light','💡']]),
+       plan(6,'b','伙伴搬备用电源','Carry backup power','🤝',[4,-1,-1],'伙伴搬来一组备用电源，留下少量余电。','The crew brings backup power with a little energy left over.', [['把备用电源放上拖板','Put backup power on the sled','🔋'],['给搬运伙伴水和口粮','Give helpers water and food','🍱'],['推到通信工作台接好','Push to the bench and connect','🔌']])]),
+    mission(7,['给明天留一杯水','Water for tomorrow'],['准备储水，不把水当作无限供应。','Prepare water without treating it as unlimited.'],
+      ['水箱又低了。Flyer 想为修车和种植都留点水。今天选储水办法。', 'The tank is low again. Flyer wants water for both repairs and the garden. Choose a storage plan.'], 'flyer','water',
+      ['回收水需要设备、处理和检查。空间站回收成果说明节约很重要，并不表示基地能凭空造出无限清水。', 'Water recovery needs equipment, treatment and checks. ISS recovery shows the value of conservation; it does not create unlimited clean water from nothing.'],'water',
+      ['水回收器用电，我们应该怎样计划？','The recycler uses electricity. How should we plan?'],
+      [['同时看看水和电','Check both water and power','💧','对！回收水也要安排电力。','Yes! Plan for both recovered water and the power it needs.'],['只看水，不管电','Ignore the power supply','🙈','设备要用电。先检查两种资源。','The equipment needs power. Check both resources.']],
+      [plan(7,'a','深度回收一箱水','Recover a full tank','♻️',[-2,7,0],'用了更多电，储下更多处理后的水。','More power recovers more treated water.', [['接上已收集的旧水','Connect the collected used water','〰️'],['运行处理设备','Run the treatment unit','♻️'],['查看水质再存进水箱','Check quality, then store','✅']]),
+       plan(7,'b','搬运密封储水袋','Move stored water bags','💧',[0,4,-1],'伙伴搬来预先存好的水，消耗一份搬运口粮。','The crew brings water stored earlier and uses one ration.', [['数一数密封储水袋','Count sealed water bags','💧'],['装上水箱运输架','Load the tank rack','🛷'],['连接袋口并放好口粮','Connect the bags and set out food','🍱']])]),
+    mission(8,['让指令找到轮子','Connect commands to wheels'],['准备测试台，安装控制器。','Prepare the test bench and install the controller.'],
+      ['Crawler 按下前进，Jade 还没有反应。我们要给她装好控制器，在架子上试轮子。', 'Crawler asks Jade to move, but she cannot respond yet. Fit a controller and test the wheels on a stand.'], 'crawler','jade',
+      ['NASA 使用模拟月壤等测试环境检查设备。安全测试能先发现问题；游戏里的控制器是简化模型。', 'NASA uses test environments such as simulated lunar soil to check equipment. Testing can reveal problems before a mission; this controller is a simplified model.'],'regolith',
+      ['第一次试轮子，怎样做更稳妥？','How should we test wheels for the first time?'],
+      [['马上开上石坡','Drive onto a rocky slope immediately','🪨','先在安全支架上检查，再进入试车道。','Check on a safe stand before entering the test lane.'],['先在支架上检查','Check them on the stand first','⚙️','对！先检查响应，再试车。','Yes! Check the response before driving.']],
+      [plan(8,'a','运行电动测试台','Use the powered test bench','🎛️',[-1,0,0],'测试台检查了连接，准备安装控制器。','The bench checks the connections for the controller.', [['把 Jade 固定在支架上','Secure Jade on the stand','⚙️'],['接好测试插头','Connect the test plug','🔌'],['点亮控制器检查灯','Run the controller check','💡']]),
+       plan(8,'b','伙伴手动逐项检查','Check together by hand','🔧',[0,-1,-1],'伙伴逐项检查，休息后准备安装。','The crew checks each connection and takes a supply break.', [['把连接图放到桌上','Lay out the connection guide','🗺️'],['按图检查每个插头','Check each plug against the guide','🔌'],['给检查伙伴水和口粮','Give the checkers water and food','🍱']])]),
+    mission(9,['救援路上的午餐','Lunch for the rescue'],['准备食物，同时照顾水和电。','Prepare food while caring for water and power.'],
+      ['Bread 要给护送 Jade 的伙伴准备午餐。今天温室能帮忙，也可以整理储存口粮。', 'Bread needs lunch for Jade’s escort crew. Grow food in the garden or prepare stored rations.'], 'bread','garden',
+      ['太空种植研究能帮助未来探索，也能提供新鲜食物。真实任务仍需要可靠的食物储备；我们的收获速度经过了游戏简化。', 'Space crop research can help future exploration and provide fresh food. Real missions still need reliable food stores; our fast harvest is a game simplification.'],'garden',
+      ['真实任务的食物计划，哪样更稳妥？','Which food plan is more reliable for a real mission?'],
+      [['有种植，也留可靠储备','Grow plants and keep reliable stores','🍱','对！研究种植时也要准备可靠食物。','Yes! Keep reliable food stores while studying crops.'],['只等今天新种的菜','Rely only on seeds planted today','🌱','植物需要生长时间，不能立即替代全部口粮。','Plants take time to grow and cannot instantly replace all rations.']],
+      [plan(9,'a','温室补水采收','Water and harvest','🥬',[0,-2,7],'食物篮变满，水箱少了两格。','The food basket fills while the tank uses two water units.', [['给根部补充水分','Water the roots','💧'],['挑选成熟叶片','Choose mature leaves','🥬'],['装进护送午餐盒','Pack escort lunch boxes','🍱']]),
+       plan(9,'b','冷藏整理储备','Organise chilled supplies','🧊',[-1,0,4],'用一点电整理先前储备，保留种植用水。','A little power prepares stored food and saves garden water.', [['打开储备柜清单','Open the supply inventory','📋'],['启动短时冷藏设备','Run the chill unit','🧊'],['把现有储备分装好','Pack the stored supplies','🍱']])]),
+    mission(10,['接住阳光，不是太阳帆','Catch sunlight with a panel'],['为 Jade 装上发电太阳能板。','Fit Jade’s electricity-generating solar panel.'],
+      ['Balloon 找到了新太阳能板。选好准备办法，再把它安装到 Jade 的背上。', 'Balloon found a new solar panel. Choose how to prepare it, then fit it on Jade’s back.'], 'balloon','solar',
+      ['太阳能板把光变成电；太阳帆利用光压产生推力。Jade 是月球车，这里装的是太阳能板，不是太阳帆。', 'A solar panel converts light into electricity; a solar sail uses light pressure for thrust. Jade is a rover and gets a panel, not a sail.'],'solar',
+      ['Jade 要用阳光发电，应装什么？','What should Jade use to generate electricity from sunlight?'],
+      [['用来推进的太阳帆','A solar sail for propulsion','⛵','太阳帆主要利用光压推进。这里要安装发电板。','A solar sail uses light pressure for propulsion. We need an electricity-generating panel.'],['发电太阳能板','A solar panel','☀️','对！太阳能板把光变成电。','Yes! A solar panel converts light into electricity.']],
+      [plan(10,'a','用电动架展开板','Unfold with the powered rig','⚙️',[3,0,0],'支架展开板，阳光给备用箱充电后，准备安装。','The rig unfolds the panel; sunlight charges a reserve before installation.', [['把折叠板放上支架','Place the folded panel on the rig','☀️'],['启动展开电机','Run the unfolding motor','⚙️'],['接线，给备用箱充电','Connect and charge a reserve','🔋']]),
+       plan(10,'b','伙伴一起展开板','Unfold together','🤝',[5,-1,-1],'伙伴手动展开板，更多阳光电量存进备用箱。','The crew unfolds the panel by hand and stores more solar energy.', [['铺好垫子，放好补给','Lay the mat and pack supplies','🍱'],['和伙伴拉开折叠架','Unfold the frame together','🤝'],['连接备用箱储存电量','Connect a reserve to store energy','🔋']])]),
+    mission(11,['为黑夜留电','Save power for darkness'],['为没阳光的时候留下备用能量。','Prepare backup energy for times without sunlight.'],
+      ['太阳很亮时，也要想想没有阳光时怎么办。Balloon 请你给基地安排备用电。', 'Even in bright sunlight we need a plan for darkness. Balloon asks you to prepare backup power.'], 'balloon','shelter',
+      ['月球许多地方的夜晚约有两个地球星期，地点不同情况也不同。本游戏一天是一段任务，不代表真实月昼夜变化。', 'At many lunar locations, night lasts about two Earth weeks; conditions vary by location. A game day is a mission chapter, not a real lunar light cycle.'],'night',
+      ['太阳照不到板时，哪样准备有帮助？','When sunlight cannot reach a panel, what can help?'],
+      [['预先储存能量','Store energy beforehand','🔋','对！提前储能，才能安排没阳光时的用电。','Yes! Store energy before darkness and plan its use.'],['让没光的板凭空发电','Ask an unlit panel to make power','⬛','没有阳光，太阳能板不能照常发电。要准备备用能量。','Without sunlight a solar panel cannot generate as usual. Prepare backup energy.']],
+      [plan(11,'a','整理已有备用电池','Prepare stored batteries','🔋',[4,0,-1],'整理好的备用电进入基地库存，伙伴吃了一份口粮。','Stored backup energy joins our supplies; the helper uses a ration.', [['找到已充电的储备箱','Find the charged reserve box','🔋'],['检查箱子的连接灯','Check its connector light','💡'],['接入备用电路','Connect the backup circuit','🔌']]),
+       plan(11,'b','清板后给备用箱充电','Charge reserves in sunlight','☀️',[5,-2,0],'伙伴喝水休息后清板充电，准备了更多储能。','Helpers use drinking water while cleaning and storing more energy.', [['断开维修接口并备饮水','Disconnect and pack drinking water','💧'],['清理板面检查工具','Clean the panel with checked tools','🧹'],['接上备用箱充电','Connect and charge the reserve','🔋']])]),
+    mission(12,['给 Jade 穿外衣','Jade’s protective coat'],['准备并安装隔热保温层。','Prepare and install thermal insulation.'],
+      ['Jade 的六件零件只剩最后一件。准备保温层，帮助她在温度变化中工作。', 'Only one of Jade’s six parts remains. Prepare insulation to help her work through temperature changes.'], 'bread','jade',
+      ['月球表面温度变化很大，设备需要热控制。保温层帮助控制热量传递，并不会自己发电，也不等于完整的辐射屏蔽。', 'Lunar surface temperatures vary greatly, so equipment needs thermal control. Insulation helps control heat transfer; it does not generate power or provide complete radiation shielding.'],'night',
+      ['给 Jade 的保温层，主要在帮什么忙？','What is Jade’s insulation mainly helping with?'],
+      [['凭空制造电力','Create electricity from nothing','⚡','保温层不发电，它帮助控制热量传递。','Insulation does not generate electricity. It helps control heat transfer.'],['控制热量传递','Control heat transfer','🧥','对！保温层是热控制的一部分。','Yes! Insulation is part of thermal control.']],
+      [plan(12,'a','用电动台裁好保温层','Cut insulation on the powered bench','⚙️',[-1,0,0],'保温层裁好了，留出接口后准备安装。','The insulation is cut with its connectors accessible.', [['铺开保温材料','Lay out the insulation','🧥'],['启动模板裁切台','Run the template cutter','⚙️'],['标好不能遮挡的接口','Mark connectors to keep clear','🔌']]),
+       plan(12,'b','伙伴按模板整理','Prepare it together','🤝',[0,-1,-1],'伙伴按模板整理，省电但需要休息补给。','The crew follows the template, saving power with a supply break.', [['展开安全模板','Open the safe template','📋'],['一起对齐保温材料','Align the insulation together','🤝'],['标出接口并放好补给','Mark connectors and set out supplies','🍱']])]),
+    mission(13,['发出回家信号','Send the home signal'],['测试天线，并给护送路线放置信标。','Test the antenna and place a route beacon.'],
+      ['六件零件都在 Jade 身上了。Flyer 需要确认通信台看得见她，再标出回家的路。', 'All six parts are on Jade. Flyer must check that the radio bench can hear her, then mark the route home.'], 'flyer','jade',
+      ['Jade 的太阳能板提供电力，电池储存能量。今天的短程信标是虚构训练道具，不能代替真实任务的完整导航系统。', 'Jade’s panel generates electricity and her battery stores energy. Our short-range beacon is a fictional training prop, not a complete real-mission navigation system.'],'solar',
+      ['电池和太阳能板，怎样一起帮 Jade？','How do the battery and solar panel help Jade together?'],
+      [['板发电，电池储电','The panel generates; the battery stores','🔋','对！发电与储电是不同的工作。','Yes! Generating and storing electricity are different jobs.'],['它们都不用能量就能永远工作','They work forever without energy','♾️','设备需要能量。电池里的储能也会用完。','Equipment needs energy. Stored battery energy can run out.']],
+      [plan(13,'a','运行完整通信测试','Run the radio test','📡',[-1,0,0],'通信测试成功，信标亮起。','The radio test succeeds and the beacon lights up.', [['接通 Jade 的测试电源','Connect Jade’s test power','🔋'],['按下通信测试按钮','Press the radio test button','📡'],['把信标放到安全路口','Place the beacon at the safe turn','🚩']]),
+       plan(13,'b','伙伴带信标走路线','Walk the beacon route together','🚩',[0,-1,-1],'伙伴确认安全路口，短程测试完成。','The crew checks the safe turn and completes a short-range test.', [['装好信标的已有电池','Fit the beacon’s stored battery','🔋'],['带水和口粮走到路口','Carry supplies to the turn','🍱'],['按下近距离测试按钮','Press the short-range test button','📡']])]),
+    mission(14,['Jade，一起回家','Jade, let’s go home'],['准备护送，亲手开车经过三个路标。','Prepare the escort and drive past three waypoints.'],
+      ['Jade 已经修好了！先选护送准备方式，再沿安全路线开回基地。伙伴会在家等你。', 'Jade is repaired! Choose the escort preparations, then drive the safe route back to base. The crew will meet you at home.'], 'crawler','jade',
+      ['真实月球车需要测试与路线规划。我们的三个路标把长途驾驶简化成安全训练，不是让月球车直接冲过所有障碍。', 'Real lunar rovers need testing and route planning. Our three waypoints simplify travel into safe training; rovers cannot simply rush through every obstacle.'],'regolith',
+      ['护送 Jade 回家时，应该怎么走？','How should we guide Jade home?'],
+      [['不看路线，直接冲','Rush ahead without checking','💨','先看路线，沿安全路标慢慢前进。','Check the route and follow the safe waypoints.'],['沿检查过的路标走','Follow the checked waypoints','🚩','对！检查路线，再一步步护送回家。','Yes! Check the route and guide her home step by step.']],
+      [plan(14,'a','电动护送台准备','Prepare powered escort support','⚙️',[-1,0,0],'测试架移开了，安全路线亮起来了。','The stand is clear and the safe route is marked.', [['检查车轮与连接','Check wheels and connections','🛞'],['打开护送指示灯','Turn on the escort lights','💡'],['移开测试架','Clear the test stand','⚙️']]),
+       plan(14,'b','伙伴步行护送准备','Prepare a walking escort','🤝',[0,-1,-1],'伙伴带好补给，站到安全路标旁。','The crew packs supplies and stands by the safe waypoints.', [['检查轮子能自由转动','Check that wheels turn freely','🛞'],['把水和口粮放入护送包','Pack water and food','🍱'],['把伙伴送到路标旁','Guide the crew to the waypoints','🚩']])])
+  ];
+  function freezeDeep(x) { Object.freeze(x); Object.keys(x).forEach(function (k) { if (x[k] && typeof x[k] === 'object' && !Object.isFrozen(x[k])) freezeDeep(x[k]); }); return x; }
+  freezeDeep(MISSIONS); freezeDeep(PARTS);
+  var STATE_KEYS = ['version','name','lang','day','stage','resources','plan','steps','quiz','installed','completed','history','helps','drive'];
+  var STAGES = ['brief','plan','action','quiz','repair','summary','drive','certificate'];
+  function plain(x) { return !!x && typeof x === 'object' && !Array.isArray(x) && (Object.getPrototypeOf(x) === Object.prototype || Object.getPrototypeOf(x) === null); }
+  function exact(x, keys) { return plain(x) && Object.keys(x).length === keys.length && keys.every(function (k) { return Object.prototype.hasOwnProperty.call(x,k); }); }
+  function integer(x, min, max) { return Number.isInteger(x) && x >= min && x <= max; }
+  function nameOK(n) { return typeof n === 'string' && n.trim() === n && n.length > 0 && n.length <= 40 && !/[\u0000-\u001f\u007f<>]/.test(n); }
+  function initial(name, lang) { return { version: 4, name: name, lang: lang, day: 1, stage: 'brief', resources: { power: 7, water: 7, food: 6 }, plan: null, steps: [], quiz: { wrong: 0, help: false, answered: false }, installed: [], completed: [], history: [], helps: 0, drive: 0 }; }
+  function create(name, lang) { return initial(nameOK(name) ? name : 'Sun Zeyi', lang === 'en' ? 'en' : 'zh'); }
+  function canonicalEvent(e) {
+    if (!plain(e) || typeof e.type !== 'string') return null;
+    if (['START_DAY','HINT','SUPPLY','NEXT_DAY'].indexOf(e.type) !== -1) return exact(e,['type']) ? { type:e.type } : null;
+    if (['CHOOSE_PLAN','STEP','ANSWER','INSTALL','DRIVE'].indexOf(e.type) !== -1) return exact(e,['type','id']) && typeof e.id === 'string' && e.id.length <= 40 ? { type:e.type,id:e.id } : null;
+    if (e.type === 'SET_LANG') return exact(e,['type','lang']) && (e.lang === 'zh' || e.lang === 'en') ? { type:e.type,lang:e.lang } : null;
+    return null;
+  }
+  function affordable(resources, p) { return RESOURCE_KEYS.every(function (k) { return resources[k] + p.eff[k] >= 0; }); }
+  function rawReduce(s,e) {
+    var m = MISSIONS[s.day-1], n, p, a;
+    if(e.type === 'SET_LANG') {
+      if(e.lang === s.lang || s.history.filter(function(x){return x.type==='SET_LANG';}).length>=256) return s;
+      n=Object.assign({},s,{lang:e.lang});
+    }
+    else if(e.type === 'START_DAY' && s.stage === 'brief') n=Object.assign({},s,{stage:'plan'});
+    else if(e.type === 'CHOOSE_PLAN' && s.stage === 'plan') {
+      p=m.plans.find(function(x){return x.id===e.id;}); if(!p || !affordable(s.resources,p)) return s;
+      n=Object.assign({},s,{stage:'action',plan:p.id});
+    }
+    else if(e.type === 'STEP' && s.stage === 'action') {
+      p=m.plans.find(function(x){return x.id===s.plan;});
+      if(!p || s.steps.length >= p.steps.length || p.steps[s.steps.length].id !== e.id) return s;
+      n=Object.assign({},s,{steps:s.steps.concat([e.id])});
+      if(n.steps.length === p.steps.length) {
+        var resources={}; RESOURCE_KEYS.forEach(function(k){resources[k]=Math.min(10,s.resources[k]+p.eff[k]);});
+        n.resources=resources; n.stage='quiz';
+      }
+    }
+    else if(e.type === 'ANSWER' && s.stage === 'quiz') {
+      a=m.answers.find(function(x){return x.id===e.id;}); if(!a) return s;
+      if(!a.correct && s.quiz.wrong >= 99) return s;
+      n=Object.assign({},s,{quiz:Object.assign({},s.quiz,a.correct ? {answered:true} : {wrong:s.quiz.wrong+1})});
+      if(a.correct) { n.stage=m.part?'repair':'summary'; if(!m.part) n.completed=s.completed.concat([s.day]); }
+    }
+    else if(e.type === 'HINT' && ['plan','action','quiz','repair','drive'].indexOf(s.stage)!==-1 && !s.quiz.help) {
+      n=Object.assign({},s,{quiz:Object.assign({},s.quiz,{help:true}),helps:s.helps+1});
+    }
+    else if(e.type === 'SUPPLY' && s.stage === 'plan' && !m.plans.some(function(x){return affordable(s.resources,x);})) {
+      p=m.plans.reduce(function(best,x){
+        function cost(v){return RESOURCE_KEYS.reduce(function(sum,k){return sum+Math.max(0,-v.eff[k]-s.resources[k]);},0);}
+        return cost(x)<cost(best)?x:best;
+      });
+      var topped={}; RESOURCE_KEYS.forEach(function(k){topped[k]=Math.max(s.resources[k],-p.eff[k]);});
+      n=Object.assign({},s,{resources:topped,helps:s.helps+1});
+    }
+    else if(e.type === 'INSTALL' && s.stage === 'repair' && e.id === m.part && s.installed.indexOf(e.id) === -1) n=Object.assign({},s,{stage:'summary',installed:s.installed.concat([e.id]),completed:s.completed.concat([s.day])});
+    else if(e.type === 'NEXT_DAY' && s.stage === 'summary') {
+      if(s.day===14) n=Object.assign({},s,{stage:'drive'});
+      else {
+        var nextResources={};RESOURCE_KEYS.forEach(function(k){nextResources[k]=Math.max(0,s.resources[k]-1);});
+        n=Object.assign({},s,{day:s.day+1,stage:'brief',resources:nextResources,plan:null,steps:[],quiz:{wrong:0,help:false,answered:false}});
+      }
+    }
+    else if(e.type === 'DRIVE' && s.stage === 'drive' && e.id === ['crater','beacon','home'][s.drive]) n=Object.assign({},s,{drive:s.drive+1,stage:s.drive===2?'certificate':'drive'});
+    else return s;
+    n.history=s.history.concat([e]);return n;
+  }
+  function same(a,b) {
+    if(a===b) return true;
+    if(!a || !b || typeof a !== 'object' || typeof b !== 'object') return false;
+    if(Array.isArray(a)!==Array.isArray(b)) return false;
+    var ka=Object.keys(a), kb=Object.keys(b);
+    return ka.length===kb.length && ka.every(function(k){return Object.prototype.hasOwnProperty.call(b,k)&&same(a[k],b[k]);});
+  }
+  function validate(value) {
+    try {
+      if(!exact(value,STATE_KEYS) || value.version!==4 || !nameOK(value.name) || ['zh','en'].indexOf(value.lang)===-1 || !integer(value.day,1,14) || STAGES.indexOf(value.stage)===-1) return false;
+      if(!exact(value.resources,RESOURCE_KEYS) || !RESOURCE_KEYS.every(function(k){return integer(value.resources[k],0,10);})) return false;
+      if(value.plan!==null && typeof value.plan!=='string') return false;
+      if(!exact(value.quiz,['wrong','help','answered']) || !integer(value.quiz.wrong,0,99) || typeof value.quiz.help!=='boolean' || typeof value.quiz.answered!=='boolean') return false;
+      if(!integer(value.helps,0,100) || !integer(value.drive,0,3)) return false;
+      if(!['steps','installed','completed','history'].every(function(k){return Array.isArray(value[k]);}) || value.steps.length>3 || value.installed.length>6 || value.completed.length>14 || value.history.length>4096) return false;
+      if(new Set(value.steps).size!==value.steps.length || new Set(value.installed).size!==value.installed.length || new Set(value.completed).size!==value.completed.length) return false;
+      if(!value.steps.every(function(x){return typeof x==='string';}) || !value.installed.every(function(x){return PARTS.some(function(p){return p.id===x;});}) || !value.completed.every(function(x,i){return x===i+1;})) return false;
+      /* Replaying the complete accepted-event ledger checks all phase / reward relations.
+         Language is the only initial value allowed to differ; canonical final language is replayed. */
+      var startLang=value.lang;
+      var firstChange=value.history.find(function(e){return plain(e)&&e.type==='SET_LANG';});
+      if(firstChange) startLang=firstChange.lang==='en'?'zh':'en';
+      var replay=initial(value.name,startLang);
+      for(var i=0;i<value.history.length;i++) {
+        var e=canonicalEvent(value.history[i]);if(!e) return false;
+        var next=rawReduce(replay,e);if(next===replay) return false;
+        replay=next;
+      }
+      return same(value,replay);
+    } catch (_) { return false; }
+  }
+  function reduce(state,event) {
+    var e=canonicalEvent(event);
+    if(!e || !validate(state) || state.history.length>=4096) return state;
+    return rawReduce(state,e);
+  }
+  function serialize(state) { if(!validate(state)) throw new TypeError('Invalid Moon Base Pals save'); return JSON.stringify(state); }
+  function restore(raw) { if(typeof raw!=='string' || raw.length>1000000) return null;try { var value=JSON.parse(raw);return validate(value)?value:null; }catch(_){return null;} }
+  return { MISSIONS:MISSIONS, PARTS:PARTS, create:create, reduce:reduce, validate:validate, serialize:serialize, restore:restore };
+});
+
+/* Short, spoken English for ages 6–7. Presentation only: no rules or save changes. */
+(function (root, factory) {
+  'use strict';
+  var api = factory();
+  if (typeof module === 'object' && module.exports) module.exports = api;
+  if (root) root.MoonKidCopy = api;
+})(typeof window !== 'undefined' ? window : null, function () {
+  'use strict';
+  var missions = {};
+  function add(day, title, brief, fact, question, options, plans) {
+    var mapped = {};
+    plans.forEach(function (p, i) {
+      mapped['d' + day + '-' + (i ? 'b' : 'a')] = { title: p[0], result: p[1], steps: p.slice(2) };
+    });
+    missions[day] = { title: title, brief: brief, fact: fact, question: question,
+      options: { a: options[0], b: options[1] }, plans: mapped };
+  }
+  add(1, 'Light the Workbench',
+    'Jade needs our help. Let’s light the workbench!',
+    'Solar panels turn sunlight into power. Dust blocks the light. The Moon has no air wind.',
+    'Which panel gets more sunlight?', ['The clean panel', 'The covered panel'], [
+      ['Brush the Panel', 'The clean panel makes power. Our helper has a drink.',
+        'Unplug it. Pack drinking water.', 'Brush off the dust.', 'Plug in the workbench.'],
+      ['Bring a Battery', 'The battery lights our bench. Our helper has a snack.',
+        'Pick up the spare battery.', 'Pack a snack for our helper.', 'Plug it into the workbench.']
+    ]);
+  add(2, 'Stop the Drip',
+    'Drip, drip! Help Flyer fix the water tank.',
+    'Used water needs cleaning and checking before we can drink it again.',
+    'How can we use old water again?', ['Drink it now', 'Clean it and check it'], [
+      ['Fix the Leak', 'No more drips! Water stays in our tank.',
+        'Turn off the water.', 'Fit the sealing ring.', 'Turn on. Check for drips.'],
+      ['Clean More Water', 'We use more power to clean more water.',
+        'Turn off the leaking pipe.', 'Fit the pipe. Clean the water.', 'Check the water and pipe.']
+    ]);
+  add(3, 'Pick Some Lunch',
+    'Help Bread care for plants and pick the big leaves.',
+    'Plants need water and light. Growing takes time. We pick leaves that are already ready.',
+    'The roots are dry. What helps?', ['A little water', 'Just a star sticker'], [
+      ['Water the Plants', 'We water the roots and pick leaves ready to eat.',
+        'Check the dry soil sign.', 'Water the roots slowly.', 'Put ready leaves in the basket.'],
+      ['Use the Light', 'We use power for light and save our water.',
+        'Move the tray under the light.', 'Turn on the plant light.', 'Pick the leaves already grown.']
+    ]);
+  add(4, 'Ready to Roll',
+    'Let’s get new wheels ready for Jade!',
+    'Moon dust can make driving tricky. Check for rocks before Jade drives.',
+    'A big rock blocks Jade. What first?', ['Drive with eyes shut', 'Check and clear the path'], [
+      ['Use the Lift', 'The lift uses power to hold Jade safely.',
+        'Put the lift under Jade.', 'Lift Jade up.', 'Bring the wheels to Jade.'],
+      ['Carry Together', 'Our pals save power. They need water and a snack.',
+        'Lay out the carrying mat.', 'Roll the wheels together.', 'Set out water and a snack.']
+    ]);
+  add(5, 'A Safe Place',
+    'It’s a practice drill. Help Balloon find a safe shelter.',
+    'Thick shielding helps protect our pals from space radiation. A door alone cannot do that.',
+    'Where can our pals find protection?', ['Inside the thick shielded shelter', 'Outside on the open Moon'], [
+      ['Power the Shelter', 'The shelter uses power. Our pals are inside.',
+        'Check the thick shield sign.', 'Turn on the shelter’s air system.', 'Take our pals inside.'],
+      ['Stay Inside', 'Our pals stay home with water and food.',
+        'Put the trip on hold.', 'Check our home’s thick shield.', 'Share water and food inside.']
+    ]);
+  add(6, 'Jade Can Call',
+    'Help Flyer get Jade’s radio ready.',
+    'Jade’s radio needs power. A solar panel makes power. A battery stores it.',
+    'What helps Jade’s radio work?', ['Unplug the power', 'Check the power plug'], [
+      ['Charge the Workbench', 'The workbench has power. Jade’s antenna can go on!',
+        'Plug in the charging cable.', 'Turn on the charger.', 'Check the power light.'],
+      ['Bring Backup Power', 'Our pals bring power. They use water and food.',
+        'Put the spare battery on board.', 'Give our pals water and food.', 'Push it over. Plug it in.']
+    ]);
+  add(7, 'Keep Some Water',
+    'Flyer needs water for our plants and repair jobs.',
+    'Cleaning used water takes power. Our water and power can both run low.',
+    'What does our water cleaner need?', ['Water and power', 'Water, but no power'], [
+      ['Clean Used Water', 'We use power to clean water for our tank.',
+        'Connect the used water tank.', 'Turn on the water cleaner.', 'Check the water. Fill our tank.'],
+      ['Bring Water Bags', 'Our pals bring stored water and use a snack.',
+        'Count the sealed water bags.', 'Put them on the rack.', 'Connect the bags. Set out food.']
+    ]);
+  add(8, 'Help Jade Move',
+    'Jade needs controls. Help Crawler check the plugs.',
+    'We test Jade’s wheels on a safe stand before she drives.',
+    'Where should we first test Jade’s wheels?', ['On a rocky hill', 'On the safe stand'], [
+      ['Use the Test Bench', 'The test bench uses power to check Jade’s plugs.',
+        'Hold Jade safely on the stand.', 'Connect the test plug.', 'Turn on the check light.'],
+      ['Check Together', 'Our pals check each plug, then have water and food.',
+        'Lay out the plug picture.', 'Match each plug to the picture.', 'Give our pals water and food.']
+    ]);
+  add(9, 'Lunch for Our Pals',
+    'Bread wants to pack lunch for Jade’s helpers.',
+    'Plants take time to grow. Space crews keep stored food too.',
+    'What is a good food plan?', ['Grow plants and store food', 'Eat seeds we just planted'], [
+      ['Water and Pick', 'We use water and pack leaves ready to eat.',
+        'Water the roots.', 'Pick the ready leaves.', 'Pack our pals’ lunch boxes.'],
+      ['Pack Stored Food', 'We use power to chill food and save our water.',
+        'Open the stored food list.', 'Turn on the food cooler.', 'Pack the food we stored.']
+    ]);
+  add(10, 'Catch the Sunlight',
+    'Help Balloon get Jade’s solar panel ready.',
+    'A solar panel turns sunlight into power. A solar sail uses light to push a spacecraft.',
+    'What can make power from sunlight?', ['A solar sail', 'A solar panel'], [
+      ['Use the Machine', 'The open panel makes power for our spare battery.',
+        'Put the folded panel in place.', 'Turn on the opening motor.', 'Plug in the spare battery.'],
+      ['Open It Together', 'Our pals open the panel, then have water and food.',
+        'Lay the mat. Pack our supplies.', 'Open the panel together.', 'Connect the battery to store power.']
+    ]);
+  add(11, 'Save Power for Later',
+    'Help Balloon get power ready for when it’s dark.',
+    'Solar panels need sunlight. Stored battery power helps us when it is dark.',
+    'What helps when the sunlight is gone?', ['Power we stored earlier', 'An unlit panel making power'], [
+      ['Bring Charged Batteries', 'Our helper brings stored power and uses a snack.',
+        'Find the charged battery box.', 'Check the plug’s light.', 'Plug in the backup power.'],
+      ['Clean and Charge', 'The clean panel charges batteries. Our helpers use drinking water.',
+        'Unplug it. Pack drinking water.', 'Check tools. Clean the panel.', 'Plug in the spare battery.']
+    ]);
+  add(12, 'Jade’s Warm Coat',
+    'Help Bread get Jade’s last part ready: her warm coat!',
+    'Jade’s coat slows heat moving in or out. It does not make power.',
+    'What does Jade’s special coat do?', ['Make power from nothing', 'Slow heat moving in or out'], [
+      ['Use the Cutter', 'The coat fits. We leave the plugs clear.',
+        'Lay out Jade’s special coat.', 'Turn on the pattern cutter.', 'Mark the plugs. Keep them clear.'],
+      ['Make It Together', 'Our pals save power. They have water and food.',
+        'Open the safe cutting pattern.', 'Line up the coat together.', 'Mark plugs. Set out our supplies.']
+    ]);
+  add(13, 'Call From the Path',
+    'Help Flyer test Jade’s radio and mark the way home.',
+    'Jade’s solar panel makes power. Her battery stores power for later.',
+    'How do the panel and battery help?', ['Make power and store it', 'Work forever without any energy'], [
+      ['Test the Radio', 'Jade’s radio works. The path light is ready!',
+        'Connect Jade’s test power.', 'Press the radio test button.', 'Put the light by the turn.'],
+      ['Walk the Path', 'Our pals check the path and test the radio.',
+        'Fit the path light’s battery.', 'Carry supplies to the turn.', 'Press the nearby radio test button.']
+    ]);
+  add(14, 'Let’s Go Home',
+    'Jade is ready! Help our pals get her home.',
+    'We check the path before Jade drives. We follow safe markers, one at a time.',
+    'How should we guide Jade home?', ['Rush without looking', 'Follow the safe path markers'], [
+      ['Use Guide Lights', 'The stand moves away. Lights mark the safe path.',
+        'Check the wheels and plugs.', 'Turn on the path lights.', 'Move the test stand away.'],
+      ['Walk With Jade', 'Our pals have supplies and wait by the safe path.',
+        'Check the wheels turn freely.', 'Pack water and food.', 'Take our pals to the markers.']
+    ]);
+  var parts = {
+    battery: 'Battery', wheels: 'Wheels', antenna: 'Antenna',
+    controller: 'Controls', panel: 'Solar panel', insulation: 'Warm coat'
+  };
+  var glossary = {
+    solarPanel: 'A panel that makes power from sunlight.',
+    battery: 'A place to store power for later.',
+    antenna: 'A part that helps a radio send and hear messages.',
+    shielding: 'A thick layer that helps block harmful space radiation.',
+    radiation: 'Energy that travels through space. Some can harm our bodies.',
+    insulation: 'Jade’s special coat. It slows heat moving in or out.',
+    marker: 'A sign that shows where to go.'
+  };
+  return { missions: missions, parts: parts, glossary: glossary };
+});
+
+/* English presentation narration; never rewrites the saved language ledger. */
+(function(root,factory){
+  const node=typeof module==='object'&&module.exports;
+  const api=factory(node?require('./model.js'):root.MoonModel,node?require('./kid-copy.js'):root.MoonKidCopy);
+  if(node)module.exports=api;if(root)root.MoonNarration=api;
+})(typeof window!=='undefined'?window:null,function(M,K){
+  function get(s){
+    const m=M.MISSIONS[s.day-1],c=K.missions[s.day],p=c.plans[s.plan];
+    if(!m)return 'Tap Help to see what to do.';
+    if(s.stage==='brief')return c.brief+' Tap Let’s help.';
+    if(s.stage==='plan')return 'Which way shall we help? '+m.plans.map((v,i)=>{
+      const costs=Object.entries(v.eff).filter(([,n])=>n<0).map(([k,n])=>Math.abs(n)+' '+k).join(' and ');
+      return (i?'Or, ':'')+c.plans[v.id].title+'. '+(costs?'Use '+costs+'. ':'');
+    }).join('');
+    if(s.stage==='action')return p.steps[s.steps.length]+' Tap the gold button.';
+    if(s.stage==='quiz'){
+      const correct=m.answers.find(a=>a.correct);
+      if(s.quiz.wrong||s.quiz.help)return 'Let’s look together. '+c.fact+' Try: '+c.options[correct.id]+'.';
+      return c.fact+' '+c.question+' '+c.options.a+'. Or, '+c.options.b+'.';
+    }
+    if(s.stage==='repair')return 'A new '+K.parts[m.part].toLowerCase()+' for Jade! Tap the plus to fit it.';
+    if(s.stage==='summary')return p.result+' You helped! '+(s.day===14?'Let’s bring Jade home.':'Play the next mission, or rest for now. The next trip uses one power, one water, and one food.');
+    if(s.stage==='drive')return ['Let’s go around the big crater. Tap the gold button.','Follow the light. Our pals are near! Tap the gold button.','Our pals are waiting. Let’s go home! Tap the gold button.'][s.drive];
+    if(s.stage==='certificate')return 'Jade is home! You helped us. Thank you, friend!';
+    return 'Tap Help to see what to do.';
+  }
+  return {get};
+});
+
+/* Generated: verified 16 kHz mono PCM offline clips only. */
+window.MOON_VOICES={"Jade needs our help. Let’s light the workbench! Tap Let’s help.":"assets/voices-v5/a9dc246121fd5d49793c39793fd2dbd55202c2df.wav","Which way shall we help? Brush the Panel. Use 1 water. Or, Bring a Battery. Use 1 food. ":"assets/voices-v5/683c8aaea23ef882c4beee77b08be5854c5452d9.wav","Unplug it. Pack drinking water. Tap the gold button.":"assets/voices-v5/71f6bcb404f1c5bb6d5985dd57144992dadf7488.wav","Brush off the dust. Tap the gold button.":"assets/voices-v5/7d818d6f97a65a548e1af8af41a459e2408e8a21.wav","Plug in the workbench. Tap the gold button.":"assets/voices-v5/2a639254683a59a11945c25f4a8d506517e700c2.wav","Solar panels turn sunlight into power. Dust blocks the light. The Moon has no air wind. Which panel gets more sunlight? The clean panel. Or, The covered panel.":"assets/voices-v5/a486dfa3b6fd4e01e54284343472afdc19d3f0f6.wav","Let’s look together. Solar panels turn sunlight into power. Dust blocks the light. The Moon has no air wind. Try: The clean panel.":"assets/voices-v5/c1b7d2eb27f8907cc9c21335dcade9ec032c6a6b.wav","The clean panel makes power. Our helper has a drink. You helped! Play the next mission, or rest for now. The next trip uses one power, one water, and one food.":"assets/voices-v5/0f216b82fb37e50299766317078e36d88575c0bd.wav","Drip, drip! Help Flyer fix the water tank. Tap Let’s help.":"assets/voices-v5/d82f2cac91a980241ebbf305ed249aeecf4006bc.wav","Which way shall we help? Fix the Leak. Use 1 power. Or, Clean More Water. Use 2 power. ":"assets/voices-v5/0ade68f6377f3c024e5a5ec18e2daaacd620a267.wav","Turn off the water. Tap the gold button.":"assets/voices-v5/205ffe5b7edcabaac1212c00667b98160282cdd4.wav","Fit the sealing ring. Tap the gold button.":"assets/voices-v5/d3d5d1235eae19d68882accfedc0aa1774affcd9.wav","Turn on. Check for drips. Tap the gold button.":"assets/voices-v5/9716297d7874eb0c58707b20e050d7033c8f5393.wav","Used water needs cleaning and checking before we can drink it again. How can we use old water again? Drink it now. Or, Clean it and check it.":"assets/voices-v5/dc8dd0f68787dcd981bf73c8f4d6ce0622f36aea.wav","Let’s look together. Used water needs cleaning and checking before we can drink it again. Try: Clean it and check it.":"assets/voices-v5/47785201fc3482880d70e49760eb78c6a1acc2cf.wav","A new battery for Jade! Tap the plus to fit it.":"assets/voices-v5/8564a1d79c16032b2dc0f6713ac703926e95ed86.wav","No more drips! Water stays in our tank. You helped! Play the next mission, or rest for now. The next trip uses one power, one water, and one food.":"assets/voices-v5/cf9641351d4917cadbd8fd201a9e70e274ebcde9.wav","Help Bread care for plants and pick the big leaves. Tap Let’s help.":"assets/voices-v5/4de880766e6e7615127b1dd35c22eccbeb5273b9.wav","Which way shall we help? Water the Plants. Use 2 water. Or, Use the Light. Use 2 power. ":"assets/voices-v5/36ce6f330b216cb150c2774b871907f4c51ab9fa.wav","Check the dry soil sign. Tap the gold button.":"assets/voices-v5/7f4ac35dff80f8ef125fe17098769fef294e0c6a.wav","Water the roots slowly. Tap the gold button.":"assets/voices-v5/f30eb016003f440785a2478bc22862570a3c855b.wav","Put ready leaves in the basket. Tap the gold button.":"assets/voices-v5/3b610fae50322237e96c13173e94d34c929b5f31.wav","Plants need water and light. Growing takes time. We pick leaves that are already ready. The roots are dry. What helps? A little water. Or, Just a star sticker.":"assets/voices-v5/2c68175d8326c4ee2d608deb4616039348ff5517.wav","Let’s look together. Plants need water and light. Growing takes time. We pick leaves that are already ready. Try: A little water.":"assets/voices-v5/1be11016c435db1e7250306420c241334cd2d3aa.wav","We water the roots and pick leaves ready to eat. You helped! Play the next mission, or rest for now. The next trip uses one power, one water, and one food.":"assets/voices-v5/b42bd522eef06f239762b30e6561312d619c221a.wav","Let’s get new wheels ready for Jade! Tap Let’s help.":"assets/voices-v5/844dd832b3b8239eb5193816830a279988d01dc0.wav","Which way shall we help? Use the Lift. Use 2 power. Or, Carry Together. Use 1 water and 1 food. ":"assets/voices-v5/4456a39c3a5ab42777ccac1caba0faa857e3259e.wav","Put the lift under Jade. Tap the gold button.":"assets/voices-v5/3da731524906f702130ad6623cd6c9ef93de7bd7.wav","Lift Jade up. Tap the gold button.":"assets/voices-v5/c77200f221facf149365878909920cd5b63579ae.wav","Bring the wheels to Jade. Tap the gold button.":"assets/voices-v5/46b430e203f1d469dacc8df669668274f4929a6f.wav","Moon dust can make driving tricky. Check for rocks before Jade drives. A big rock blocks Jade. What first? Drive with eyes shut. Or, Check and clear the path.":"assets/voices-v5/7ae2bed8d1f5f1ad59156593bc75f87cefa9a13e.wav","Let’s look together. Moon dust can make driving tricky. Check for rocks before Jade drives. Try: Check and clear the path.":"assets/voices-v5/336b1b082c212d873dbd281cc68df98dde1f1ec0.wav","A new wheels for Jade! Tap the plus to fit it.":"assets/voices-v5/5a8e68705101f366be043ec0b3887eeabc152d15.wav","The lift uses power to hold Jade safely. You helped! Play the next mission, or rest for now. The next trip uses one power, one water, and one food.":"assets/voices-v5/c1c58cf33369b053fbfeabb85f18228c5fc9e055.wav","It’s a practice drill. Help Balloon find a safe shelter. Tap Let’s help.":"assets/voices-v5/e17378e50ece1c6c6b93fef34135abde5ce66cf0.wav","Which way shall we help? Power the Shelter. Use 1 power. Or, Stay Inside. Use 1 water and 1 food. ":"assets/voices-v5/0be87f8e664224b91931f968c969e7b76251b25a.wav","Check the thick shield sign. Tap the gold button.":"assets/voices-v5/d64b57f20c1e39e9640ed6161abfb3514d537ba8.wav","Turn on the shelter’s air system. Tap the gold button.":"assets/voices-v5/490a6dcab6104593605302c7c69f8f8db78627c8.wav","Take our pals inside. Tap the gold button.":"assets/voices-v5/25afdfe8266531aaf50fb0a5c2fe8aafbbf83ad6.wav","Thick shielding helps protect our pals from space radiation. A door alone cannot do that. Where can our pals find protection? Inside the thick shielded shelter. Or, Outside on the open Moon.":"assets/voices-v5/bb0222b9e05dadf2349425aa0c493c7701df929a.wav","Let’s look together. Thick shielding helps protect our pals from space radiation. A door alone cannot do that. Try: Inside the thick shielded shelter.":"assets/voices-v5/d3d8d32b525c3e75bb2c657271e1a93dfa50119f.wav","The shelter uses power. Our pals are inside. You helped! Play the next mission, or rest for now. The next trip uses one power, one water, and one food.":"assets/voices-v5/c4ffa63d02b36b43c570ed0498e8d7e0e264cfdb.wav","Help Flyer get Jade’s radio ready. Tap Let’s help.":"assets/voices-v5/18e64f579a4033e583da8e56cfa53af5174cfce2.wav","Which way shall we help? Charge the Workbench. Use 1 power. Or, Bring Backup Power. Use 1 water and 1 food. ":"assets/voices-v5/071241fac0d1ad43b6957b322077231e8f79230b.wav","Plug in the charging cable. Tap the gold button.":"assets/voices-v5/5bc42e04a09990466b22669936170b02950a7f6c.wav","Turn on the charger. Tap the gold button.":"assets/voices-v5/aaffd0a92e9dd03dc1d0bd48af06d5f798f3f7c9.wav","Check the power light. Tap the gold button.":"assets/voices-v5/097a2cb8fe9317890bde324bcacf65dc143846ef.wav","Jade’s radio needs power. A solar panel makes power. A battery stores it. What helps Jade’s radio work? Unplug the power. Or, Check the power plug.":"assets/voices-v5/e30dce011331e51b326619161b29fd878dab6bcf.wav","Let’s look together. Jade’s radio needs power. A solar panel makes power. A battery stores it. Try: Check the power plug.":"assets/voices-v5/ab36798c68ca1e82bd0848e4c236dd547986d9e0.wav","A new antenna for Jade! Tap the plus to fit it.":"assets/voices-v5/729685bd8ec00e33587a075d021c48944bdd2a80.wav","The workbench has power. Jade’s antenna can go on! You helped! Play the next mission, or rest for now. The next trip uses one power, one water, and one food.":"assets/voices-v5/34bbdda032c1966d08cf02ae83f54f8baed089b5.wav","Flyer needs water for our plants and repair jobs. Tap Let’s help.":"assets/voices-v5/1ce9eff96514f88009e4d5ef2b5ec39c20210652.wav","Which way shall we help? Clean Used Water. Use 2 power. Or, Bring Water Bags. Use 1 food. ":"assets/voices-v5/8929243b9c68b0325df60416d34eee9753ced8c9.wav","Connect the used water tank. Tap the gold button.":"assets/voices-v5/b9098a545849e2eb31d8f7119b3176dc9c5e0ff4.wav","Turn on the water cleaner. Tap the gold button.":"assets/voices-v5/59363be5f80ad6ab968918c69420f502d20232e7.wav","Check the water. Fill our tank. Tap the gold button.":"assets/voices-v5/1fa47979b7a926c1e709d435eeb1eec54e4c2bf9.wav","We use power to clean water for our tank. You helped! Play the next mission, or rest for now. The next trip uses one power, one water, and one food.":"assets/voices-v5/ab1ead6177df800992002a45f05b70282b9a0b19.wav","Count the sealed water bags. Tap the gold button.":"assets/voices-v5/3bdbe37ffabb424321385e2587e7b2326abd58e6.wav","Put them on the rack. Tap the gold button.":"assets/voices-v5/7dbde3ef9a6b97874c4d1f3be63d3d8275831a22.wav","Connect the bags. Set out food. Tap the gold button.":"assets/voices-v5/c74ff407f54ac21de91a0462652603396a71d8db.wav","Cleaning used water takes power. Our water and power can both run low. What does our water cleaner need? Water and power. Or, Water, but no power.":"assets/voices-v5/e998b4d6ea69055abb01d3f7aecec01dd014cae2.wav","Let’s look together. Cleaning used water takes power. Our water and power can both run low. Try: Water and power.":"assets/voices-v5/7dd136bb77043a4efbcedeb958453d173bae43bb.wav","Our pals bring stored water and use a snack. You helped! Play the next mission, or rest for now. The next trip uses one power, one water, and one food.":"assets/voices-v5/e012492fd5260bff10fa299330b77b9967bb7689.wav","Jade needs controls. Help Crawler check the plugs. Tap Let’s help.":"assets/voices-v5/58af5a26d4e89ef45f891c80dcd64db9f6b0e6cd.wav","Which way shall we help? Use the Test Bench. Use 1 power. Or, Check Together. Use 1 water and 1 food. ":"assets/voices-v5/7d9c015148efcac651dcf307554e30c102d5a0dc.wav","Hold Jade safely on the stand. Tap the gold button.":"assets/voices-v5/8fb49561d58765272447ed77a505c55b5a82de3f.wav","Connect the test plug. Tap the gold button.":"assets/voices-v5/87110f5e4fbee41f1b0b833ca574808ec6657589.wav","Turn on the check light. Tap the gold button.":"assets/voices-v5/4d947334142c684f541f24fca5d7590a3fdbf1d3.wav","The test bench uses power to check Jade’s plugs. You helped! Play the next mission, or rest for now. The next trip uses one power, one water, and one food.":"assets/voices-v5/ab331ca19b769cf0e548cf42c3632d58ee9ed244.wav","Lay out the plug picture. Tap the gold button.":"assets/voices-v5/a469e8c2e207d25096dfb0a2d383aa639a006859.wav","Match each plug to the picture. Tap the gold button.":"assets/voices-v5/d2b138fec3c8328410142772427237688c98c4c8.wav","Give our pals water and food. Tap the gold button.":"assets/voices-v5/fb0a1d67a3f03972a50ab0a616d3f72aa6eae7d5.wav","We test Jade’s wheels on a safe stand before she drives. Where should we first test Jade’s wheels? On a rocky hill. Or, On the safe stand.":"assets/voices-v5/addb905c9d1c1900df649f79e3e8b7aa51e8a7a3.wav","Let’s look together. We test Jade’s wheels on a safe stand before she drives. Try: On the safe stand.":"assets/voices-v5/191f756599ee24824cade748e70ad88b6b2d17e7.wav","A new controls for Jade! Tap the plus to fit it.":"assets/voices-v5/039bf9cf1a2b11be21dc98772b3391f221734bf7.wav","Our pals check each plug, then have water and food. You helped! Play the next mission, or rest for now. The next trip uses one power, one water, and one food.":"assets/voices-v5/8aaf1558591f2af82bda30ce2479cd516a0692b0.wav","Bread wants to pack lunch for Jade’s helpers. Tap Let’s help.":"assets/voices-v5/477dbafa0d26fb1be46c20bc6c990148f203ec4c.wav","Which way shall we help? Water and Pick. Use 2 water. Or, Pack Stored Food. Use 1 power. ":"assets/voices-v5/85174fa99c33136c3813f918fb99f186a35e7f6f.wav","Water the roots. Tap the gold button.":"assets/voices-v5/50d2c7f97c388f6f1d3f1ce4cb273b9449b52ab9.wav","Pick the ready leaves. Tap the gold button.":"assets/voices-v5/2075bf5a863bede404ebcbc3203d2e2c0b041a48.wav","Pack our pals’ lunch boxes. Tap the gold button.":"assets/voices-v5/9936c5b89771907ede31cf65c3c21981965f34f2.wav","Plants take time to grow. Space crews keep stored food too. What is a good food plan? Grow plants and store food. Or, Eat seeds we just planted.":"assets/voices-v5/7ae17675667f00eef8cda63ba104cd0279448a69.wav","Let’s look together. Plants take time to grow. Space crews keep stored food too. Try: Grow plants and store food.":"assets/voices-v5/71c19575fcd751222f0344bede22d102461a1ac8.wav","We use water and pack leaves ready to eat. You helped! Play the next mission, or rest for now. The next trip uses one power, one water, and one food.":"assets/voices-v5/67448c2e3f2d8d7415a28cf9a755f3f6189df8e6.wav","Help Balloon get Jade’s solar panel ready. Tap Let’s help.":"assets/voices-v5/36b8baee48bbf65ca9dfc1d351861153b1fd238c.wav","Which way shall we help? Use the Machine. Or, Open It Together. Use 1 water and 1 food. ":"assets/voices-v5/01e5bca9622bf090e2d993e40b085fb20181861f.wav","Put the folded panel in place. Tap the gold button.":"assets/voices-v5/dd09e41ffd91818ed8b332d2aee9b9d079ba4db8.wav","Turn on the opening motor. Tap the gold button.":"assets/voices-v5/e20d437e83288e90b4ecf4f6d22ec83fcd70c3a1.wav","Plug in the spare battery. Tap the gold button.":"assets/voices-v5/e589bbc3e545455142dd65d7c05ed40d6861c0f9.wav","A solar panel turns sunlight into power. A solar sail uses light to push a spacecraft. What can make power from sunlight? A solar sail. Or, A solar panel.":"assets/voices-v5/56b62509311a3c03ba6b143fd4e617abf64a5ad4.wav","Let’s look together. A solar panel turns sunlight into power. A solar sail uses light to push a spacecraft. Try: A solar panel.":"assets/voices-v5/cce99149f27ec4254017e8ff3048abaa30bf7be7.wav","A new solar panel for Jade! Tap the plus to fit it.":"assets/voices-v5/3bca0f86e8cb8852df177a11f7ce9066d83a5493.wav","The open panel makes power for our spare battery. You helped! Play the next mission, or rest for now. The next trip uses one power, one water, and one food.":"assets/voices-v5/dd83f77a2d64ec12d7c9ba3667f969c1e622492c.wav","Help Balloon get power ready for when it’s dark. Tap Let’s help.":"assets/voices-v5/6bf7754b0d83174cd62ec2f71b4dd16c9a328976.wav","Which way shall we help? Bring Charged Batteries. Use 1 food. Or, Clean and Charge. Use 2 water. ":"assets/voices-v5/6fcdfe9a67da22f2498e66fb6659af92de3eb576.wav","Find the charged battery box. Tap the gold button.":"assets/voices-v5/bbe68b3ca56acbc749af70eb89c65b94e9c340cb.wav","Check the plug’s light. Tap the gold button.":"assets/voices-v5/124a065e0c14161d7c5de199017fe47862fc51db.wav","Plug in the backup power. Tap the gold button.":"assets/voices-v5/8ddc50d517a160104ba9d8b87b202b6771ac7d05.wav","Solar panels need sunlight. Stored battery power helps us when it is dark. What helps when the sunlight is gone? Power we stored earlier. Or, An unlit panel making power.":"assets/voices-v5/558a534362c5f080c38a692147a118c667400635.wav","Let’s look together. Solar panels need sunlight. Stored battery power helps us when it is dark. Try: Power we stored earlier.":"assets/voices-v5/3b44483b890158b0e47d183e8d7622b3fdd67537.wav","Our helper brings stored power and uses a snack. You helped! Play the next mission, or rest for now. The next trip uses one power, one water, and one food.":"assets/voices-v5/4d4b4f65e5274885b75750c5821e774c9a8593a9.wav","Help Bread get Jade’s last part ready: her warm coat! Tap Let’s help.":"assets/voices-v5/0fb3eef6f229b63ca63c1ac753f351dbb8d20cd7.wav","Which way shall we help? Use the Cutter. Use 1 power. Or, Make It Together. Use 1 water and 1 food. ":"assets/voices-v5/414181b77fbe83e8dc69844213b72eb206345f54.wav","Lay out Jade’s special coat. Tap the gold button.":"assets/voices-v5/d3b9a0d7810ea93958265fef57e19526f89b3255.wav","Turn on the pattern cutter. Tap the gold button.":"assets/voices-v5/20d80a794c9d89bb03208eb7c3adfec0e62033e3.wav","Mark the plugs. Keep them clear. Tap the gold button.":"assets/voices-v5/207490fe6e71691d7690aa3a987efa798a1051c1.wav","Jade’s coat slows heat moving in or out. It does not make power. What does Jade’s special coat do? Make power from nothing. Or, Slow heat moving in or out.":"assets/voices-v5/60af80e6769ee77f06404d9def52cd38872f8dde.wav","Let’s look together. Jade’s coat slows heat moving in or out. It does not make power. Try: Slow heat moving in or out.":"assets/voices-v5/f07db8081960a511a526e245db4c0219ed6e4fe5.wav","A new warm coat for Jade! Tap the plus to fit it.":"assets/voices-v5/60625e243e5ef41183475618435ae858505326f2.wav","The coat fits. We leave the plugs clear. You helped! Play the next mission, or rest for now. The next trip uses one power, one water, and one food.":"assets/voices-v5/7aa386d4601f29a337fe156ab7b2bc7c8c5f2652.wav","Help Flyer test Jade’s radio and mark the way home. Tap Let’s help.":"assets/voices-v5/764008eac45e2781728fc46d94532e0024a73653.wav","Which way shall we help? Test the Radio. Use 1 power. Or, Walk the Path. Use 1 water and 1 food. ":"assets/voices-v5/565892317c6d812566116af854e232fe0106e0b6.wav","Connect Jade’s test power. Tap the gold button.":"assets/voices-v5/a0f2bb74c4b5d713b4e9324d31e829579ba38b43.wav","Press the radio test button. Tap the gold button.":"assets/voices-v5/acf901da0c83c5170240ef29a2993d76e388fc8c.wav","Put the light by the turn. Tap the gold button.":"assets/voices-v5/89c8c2f083adcdb563003414582a33b7e9925a5f.wav","Jade’s solar panel makes power. Her battery stores power for later. How do the panel and battery help? Make power and store it. Or, Work forever without any energy.":"assets/voices-v5/e18a4d573c769d65b8543f9cc785b18e0a8461cd.wav","Let’s look together. Jade’s solar panel makes power. Her battery stores power for later. Try: Make power and store it.":"assets/voices-v5/7fb608404b0b5fae0ec56858c859f027184e4c80.wav","Jade’s radio works. The path light is ready! You helped! Play the next mission, or rest for now. The next trip uses one power, one water, and one food.":"assets/voices-v5/1db11a3a06e4c35987034ff0c45f16497004c7be.wav","Jade is ready! Help our pals get her home. Tap Let’s help.":"assets/voices-v5/fd612c11262f9b78e1211ee2e56dc8263f99d68e.wav","Which way shall we help? Use Guide Lights. Use 1 power. Or, Walk With Jade. Use 1 water and 1 food. ":"assets/voices-v5/a323d7cdf510a092cb4f74a775be50fcd0ce056b.wav","Check the wheels and plugs. Tap the gold button.":"assets/voices-v5/fb098f140679fb706e4b2be928d399fd81e42967.wav","Turn on the path lights. Tap the gold button.":"assets/voices-v5/27bc2d258ef253af03d111e40a363308a247e149.wav","Move the test stand away. Tap the gold button.":"assets/voices-v5/7ad5d680cd18402056382f2e22108f838fa243de.wav","We check the path before Jade drives. We follow safe markers, one at a time. How should we guide Jade home? Rush without looking. Or, Follow the safe path markers.":"assets/voices-v5/cd9f6218e87984d17c14f8dd6b55d4356c78bced.wav","Let’s look together. We check the path before Jade drives. We follow safe markers, one at a time. Try: Follow the safe path markers.":"assets/voices-v5/c753391f2d85b9019857fde98528720645ad2d5f.wav","The stand moves away. Lights mark the safe path. You helped! Let’s bring Jade home.":"assets/voices-v5/8cddae0c4ec94691a3d3c607b36788df6ce1dcd3.wav","Let’s go around the big crater. Tap the gold button.":"assets/voices-v5/e533c2205b4910ded17c420332101eca53a5df91.wav","Follow the light. Our pals are near! Tap the gold button.":"assets/voices-v5/3a67c44618471cccf544de5f362725690a29e444.wav","Our pals are waiting. Let’s go home! Tap the gold button.":"assets/voices-v5/9d98528156ba1671bc38bb8abdb1f4cc852d75ff.wav","Jade is home! You helped us. Thank you, friend!":"assets/voices-v5/3fd0ee304e87d5d6e240e98a4bf054a2690c4984.wav","Pick up the spare battery. Tap the gold button.":"assets/voices-v5/79d3e9d7423399166c57358735930ca5ed98e4e4.wav","Pack a snack for our helper. Tap the gold button.":"assets/voices-v5/d540cd571fe0fd94a58e2cda4a67dcd07aeb01e3.wav","Plug it into the workbench. Tap the gold button.":"assets/voices-v5/3f4b6ff16ce93583d760ad687a398c58f71dbb9b.wav","The battery lights our bench. Our helper has a snack. You helped! Play the next mission, or rest for now. The next trip uses one power, one water, and one food.":"assets/voices-v5/56d11cae106b662b48779a22e5b81a5d10613705.wav","Turn off the leaking pipe. Tap the gold button.":"assets/voices-v5/527bc36e00b73cbb4107d163b2e8165ebabd0115.wav","Fit the pipe. Clean the water. Tap the gold button.":"assets/voices-v5/d2badfff6c65cf394de2b24a83c84ce00f8e424a.wav","Check the water and pipe. Tap the gold button.":"assets/voices-v5/573dc58ff7b743876975233c856be7961437e38d.wav","We use more power to clean more water. You helped! Play the next mission, or rest for now. The next trip uses one power, one water, and one food.":"assets/voices-v5/0fbb9b0f6c9e4d582ca886654c069f7f93b80cb1.wav","Move the tray under the light. Tap the gold button.":"assets/voices-v5/37389561b6ba1ec7d431aee6da5bcccb0b1818d4.wav","Turn on the plant light. Tap the gold button.":"assets/voices-v5/7fd9bedb5b9f6ce5a5c9932d090b07b8de2c7c45.wav","Pick the leaves already grown. Tap the gold button.":"assets/voices-v5/324aa024fc432516448db08a27efb445afb45901.wav","We use power for light and save our water. You helped! Play the next mission, or rest for now. The next trip uses one power, one water, and one food.":"assets/voices-v5/674810277b0dd06a46a1cd3f90790c2861c99a2a.wav","Lay out the carrying mat. Tap the gold button.":"assets/voices-v5/7a23b620f82493e3d77ff5944e61a39383490e9d.wav","Roll the wheels together. Tap the gold button.":"assets/voices-v5/4dece06c2a7bcd5e4a8500fcd2bbb6e1cd7cfd57.wav","Set out water and a snack. Tap the gold button.":"assets/voices-v5/398bf229cce839724daac440b8302e1b33921550.wav","Our pals save power. They need water and a snack. You helped! Play the next mission, or rest for now. The next trip uses one power, one water, and one food.":"assets/voices-v5/1f9a22731606133b468860d8a5f64e44f102ffb8.wav","Put the trip on hold. Tap the gold button.":"assets/voices-v5/4c7b69dcc736b324811b1d226ee4ce46fa539a42.wav","Check our home’s thick shield. Tap the gold button.":"assets/voices-v5/843cbc5a35ae61b8b65060196405bcc04ecbc184.wav","Share water and food inside. Tap the gold button.":"assets/voices-v5/56afdf8d85e07ddbe9509994f2e3df730deb5de2.wav","Our pals stay home with water and food. You helped! Play the next mission, or rest for now. The next trip uses one power, one water, and one food.":"assets/voices-v5/78727ae998ee7ea3ae29862b5b8956d4a466de5d.wav","Put the spare battery on board. Tap the gold button.":"assets/voices-v5/4d353e24e98db1424f012cb5d88dea38b8a3e834.wav","Push it over. Plug it in. Tap the gold button.":"assets/voices-v5/dbd95cec163cfb0ece10ec6cbbcce4ed00db3748.wav","Our pals bring power. They use water and food. You helped! Play the next mission, or rest for now. The next trip uses one power, one water, and one food.":"assets/voices-v5/46aa210b0c81a6e069d3a949c8a4aa15b69acf2b.wav","Open the stored food list. Tap the gold button.":"assets/voices-v5/39b153f4aff60315cd3a9eb46a914f9fc9bbe26a.wav","Turn on the food cooler. Tap the gold button.":"assets/voices-v5/cc513f217f100d42c0dea7ba07422656e82083f2.wav","Pack the food we stored. Tap the gold button.":"assets/voices-v5/602cdcb6b1e5e5e0c3fd544cf2366f8b80bcd872.wav","We use power to chill food and save our water. You helped! Play the next mission, or rest for now. The next trip uses one power, one water, and one food.":"assets/voices-v5/632d49840c60cac06a881f5b7864825e3fd724bc.wav","Lay the mat. Pack our supplies. Tap the gold button.":"assets/voices-v5/5117228741b2a0c851b6a8cc12a9b4295fc3e03b.wav","Open the panel together. Tap the gold button.":"assets/voices-v5/be2a9a7936596ca31910c9e20f64998b6084788a.wav","Connect the battery to store power. Tap the gold button.":"assets/voices-v5/4fd9c32d111c8ee87c9e0e8b5b5ee65ed320bc0b.wav","Our pals open the panel, then have water and food. You helped! Play the next mission, or rest for now. The next trip uses one power, one water, and one food.":"assets/voices-v5/2995d9df31a124783f0774d09a55ba6dbe869a4f.wav","Check tools. Clean the panel. Tap the gold button.":"assets/voices-v5/c1aa9518198ede1f9d0403b2da92ca5bc7df8336.wav","The clean panel charges batteries. Our helpers use drinking water. You helped! Play the next mission, or rest for now. The next trip uses one power, one water, and one food.":"assets/voices-v5/923c1d1a64fa6fb2a49d4ed3b55d0bfc0f6e4a2e.wav","Open the safe cutting pattern. Tap the gold button.":"assets/voices-v5/f0203635c43769cebde6fbeed198642cc8aa2405.wav","Line up the coat together. Tap the gold button.":"assets/voices-v5/004c50b2633370e19459f5ac1f87953b189c5472.wav","Mark plugs. Set out our supplies. Tap the gold button.":"assets/voices-v5/dd2146b5e12837b5edf86045df39c8873735312f.wav","Our pals save power. They have water and food. You helped! Play the next mission, or rest for now. The next trip uses one power, one water, and one food.":"assets/voices-v5/e7cde46ce577f4e9ff5fa5823e3aa5cb3b62e29a.wav","Fit the path light’s battery. Tap the gold button.":"assets/voices-v5/c13090d6feb9175b5712a19179e7e1090ff769df.wav","Carry supplies to the turn. Tap the gold button.":"assets/voices-v5/9edfb32668d889c62205faab362388a8f2ddb04a.wav","Press the nearby radio test button. Tap the gold button.":"assets/voices-v5/c14af0adc3c137865562abaed45ecc91dc831f2e.wav","Our pals check the path and test the radio. You helped! Play the next mission, or rest for now. The next trip uses one power, one water, and one food.":"assets/voices-v5/f628c579dd034a5e83f8059e9c47d09cf90e6590.wav","Check the wheels turn freely. Tap the gold button.":"assets/voices-v5/c60e9ca886df547d85ec8a648c6e53087d0a24bd.wav","Pack water and food. Tap the gold button.":"assets/voices-v5/ca9fdc62d4b8ec2839b95db359830189b5c6231c.wav","Take our pals to the markers. Tap the gold button.":"assets/voices-v5/ecb0812a300b8acefc7035c9f0c489f48f77b483.wav","Our pals have supplies and wait by the safe path. You helped! Let’s bring Jade home.":"assets/voices-v5/1b1af72e09787ab44bae03bf165465c88b05cc0e.wav"};
+</script>
+<script>/* Moon Base Pals — interface. All mission mutations pass through MoonModel.reduce. */
+(() => {
+  'use strict';
+  const M = window.MoonModel;
+  const root = document.getElementById('app');
+  const KEY = 'mbp_v4', PREF = 'mbp_preferences_v4';
+  const PALS = ['crawler','flyer','balloon','bread'];
+  const ICONS = {power:'⚡',water:'💧',food:'🥬'};
+  let storageError = '', notice = '', saved = null, state, home = true, modal = null;
+  let paused = false, selectedTool = false, peek = '', toastTimer, inputAt = 0, lastAction='', lastId='', context, master;
+  let narrationAudio = null, muted = false, audioOn = true, lastFocus = null, keepsake=false, voiceEpoch=0, pendingName=null;
+  const $ = id => document.getElementById(id);
+  const esc = s => String(s ?? '').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  function read(key){try{return localStorage.getItem(key);}catch(e){storageError='blocked';return null;}}
+  function write(key,value){try{localStorage.setItem(key,value);return true;}catch(e){storageError='blocked';return false;}}
+  const prefsRaw = read(PREF);
+  let prefs = {};
+  try{prefs = JSON.parse(prefsRaw)||{};}catch(e){/* Safe defaults for damaged preferences. */}
+  muted = prefs.muted === true; audioOn = prefs.audioOn !== false;
+  const raw = read(KEY);
+  saved = raw ? M.restore(raw) : null;
+  state = saved || M.create('Sun Zeyi','en');
+  if(raw && !saved) notice='damaged';
+  else if(!raw && read('mbp_v3')) notice='legacy';
+  function t(zh,en){return en;}
+  function L(pair){return pair?.en || '';}
+  function current(){return M.MISSIONS[state.day-1];}
+  function plan(){return current().plans.find(p=>p.id===state.plan);}
+  function part(){return M.PARTS.find(p=>p.id===current().part);}
+  function persist(){
+    saved=state;
+    write(KEY,M.serialize(state));
+    write(PREF,JSON.stringify({muted,audioOn,lang:state.lang}));
+  }
+  function textNotice(){
+    if(storageError)return t('⚠ 浏览器不能保存到磁盘。临时进度仍可继续；请保持此页打开，关闭后可能丢失。','⚠ This browser cannot write saves. You can continue in this open page; closing it may lose progress.');
+    if(notice==='damaged')return t('旧存档有损坏。没有删除原数据；开始新旅程前会请你确认。','This save is damaged. It has not been deleted. Confirm before starting a new journey.');
+    if(notice==='legacy')return t('找到旧版旅程。新版有新的任务与规则，旧存档仍保留；这次从新的救援开始。','An earlier journey is kept safely. This edition has new missions; start a new rescue.');
+    return '';
+  }
+  function prefsSave(){write(PREF,JSON.stringify({muted,audioOn,lang:state.lang}));}
+  function cancelVoice(){
+    voiceEpoch++;
+    if(narrationAudio){narrationAudio.pause();narrationAudio.removeAttribute('src');narrationAudio.load();narrationAudio=null;}
+    try{window.speechSynthesis?.cancel();}catch(e){/* no system narration */}
+  }
+  function ensureAudio(){
+    if(muted)return;
+    try{if(!context){context=new(window.AudioContext||window.webkitAudioContext)();master=context.createGain();master.connect(context.destination);}if(!paused)master.gain.setValueAtTime(.17,context.currentTime);if(context.state==='suspended')context.resume().catch(()=>{});}catch(e){/* Silent play stays available. */}
+  }
+  function tone(success=true){
+    if(muted || paused)return;
+    ensureAudio();if(!context||!master)return;
+    try{const o=context.createOscillator(),g=context.createGain();o.type='sine';o.frequency.value=success?660:440;g.gain.setValueAtTime(.001,context.currentTime);g.gain.exponentialRampToValueAtTime(.22,context.currentTime+.015);g.gain.exponentialRampToValueAtTime(.001,context.currentTime+.17);o.connect(g);g.connect(master);o.start();o.stop(context.currentTime+.18);o.onended=()=>{o.disconnect();g.disconnect();};}catch(e){/* Visual feedback is sufficient. */}
+  }
+  function speak(text,manual=false){
+    cancelVoice();if(muted||(!audioOn&&!manual)||paused||!text)return;
+    const epoch=voiceEpoch;
+    const file=window.MOON_VOICES?.[text];
+    if(file){narrationAudio=new Audio(file);narrationAudio.volume=.85;narrationAudio.play().catch(()=>{if(epoch===voiceEpoch)systemSpeak(text,manual);});return;}
+    systemSpeak(text,manual);
+  }
+  function systemSpeak(text,manual=false){
+    if(muted||(!audioOn&&!manual)||paused)return;
+    try{const voices=window.speechSynthesis?.getVoices()||[],v=voices.find(v=>v.lang.toLowerCase().startsWith('en'));if(!v)return;const u=new SpeechSynthesisUtterance(text);u.lang=v.lang;u.voice=v;u.rate=.84;window.speechSynthesis.speak(u);}catch(e){/* No language voice: visible instructions and demonstrations remain. */}
+  }
+  function narrate(manual=false){speak(window.MoonNarration?.get(state) || L(current().goal),manual);}
+  function stopSound(){cancelVoice();if(master&&context)master.gain.setValueAtTime(0,context.currentTime);}
+  function toast(text){$('announcer').textContent=text;const el=$('toast');if(el)el.textContent=text;clearTimeout(toastTimer);toastTimer=setTimeout(()=>{const e=$('toast');if(e)e.textContent='';},3500);}
+  function submit(event){
+    if(home||paused||modal)return;
+    const old=state,next=M.reduce(state,event);
+    if(next===old)return;
+    state=next;selectedTool=false;peek='';persist();
+    if(event.type==='ANSWER'&&state.stage==='quiz')tone(false);else tone(true);
+    render();
+    const focusTarget=root.querySelector(state.stage==='action'?'.bench-target.next':'.chapter-line h1');
+    if(focusTarget){focusTarget.setAttribute('tabindex','-1');focusTarget.focus({preventScroll:true});}
+    if(old.stage!==state.stage) {
+      if(state.stage==='action')window.scrollTo({top:0,behavior:'instant'});
+      else window.scrollTo({top:0,behavior:'instant'});
+    }
+    
+    narrate();
+  }
+  function img(pal,expr='happy',cls='avatar'){return `<img class="${cls}" src="assets/${esc(pal)}_${esc(expr)}.jpg" alt="${esc(pal[0].toUpperCase()+pal.slice(1))}" data-fallback="${esc(pal)}">`;}
+  function button(text,action,cls='btn',extra=''){return `<button type="button" class="${cls}" data-action="${action}" ${extra}>${text}</button>`;}
+  function tool(text,action,label){return button(text,action,'tool',`aria-label="${esc(label)}" title="${esc(label)}"`);}
+  const K=window.MoonKidCopy;
+  function copy(){return K.missions[state.day];}
+  function pc(p=plan()){return copy().plans[p.id];}
+  function partName(id){return K.parts[id]||id;}
+  function header(){return `<header class="header"><button class="brand" data-action="home" aria-label="Go home"><span class="brand-moon" aria-hidden="true">☾</span><b>Moon Base Pals</b></button><nav aria-label="Game controls">${!home?button('Ⅱ <span>Pause</span>','pause','quiet'):''}${button('☰ <span>Menu</span>','menu','quiet')}</nav></header>`;}
+  function dots(n,total=3){return `<span class="step-dots" aria-label="${n} of ${total} steps done">${Array.from({length:total},(_,i)=>`<i class="${i<n?'done':i===n?'now':''}">${i<n?'✓':''}</i>`).join('')}</span>`;}
+  function resourceName(k){return {power:'Power',water:'Water',food:'Food'}[k];}
+  function meters(){return `<div class="meters" aria-label="Our supplies">${Object.keys(ICONS).map(k=>`<div class="resource ${k}" role="meter" aria-label="${resourceName(k)}" aria-valuenow="${state.resources[k]}" aria-valuemin="0" aria-valuemax="10"><span>${ICONS[k]} ${resourceName(k)}</span><b>${state.resources[k]}<small>/10</small></b><div class="segments" aria-hidden="true">${Array.from({length:10},(_,i)=>`<i class="${i<state.resources[k]?'on':''}"></i>`).join('')}</div></div>`).join('')}</div>`;}
+  function missionDelta(){
+    const firstChange=state.history.find(e=>e.type==='SET_LANG');
+    let replay=M.create(state.name,firstChange?(firstChange.lang==='en'?'zh':'en'):state.lang);
+    for(const e of state.history){const next=M.reduce(replay,e);if(e.type==='STEP'&&replay.day===state.day&&replay.stage==='action'&&next.stage==='quiz')return Object.fromEntries(Object.keys(ICONS).map(k=>[k,next.resources[k]-replay.resources[k]]));replay=next;}
+    return plan()?.eff||{};
+  }
+  function delta(eff,actual=false){
+    const values=actual?missionDelta():eff;
+    return `<div class="trade">${Object.entries(values).filter(([,v])=>v!==0).map(([k,v])=>{const shown=actual?v:Math.min(v,10-state.resources[k]);return `<span class="delta ${v<0?'cost':'gain'}">${v<0?'Use':'Get'} <b>${Math.abs(shown)}</b> <span aria-label="${resourceName(k)}">${ICONS[k]}</span>${!actual&&shown<v?'<small> full</small>':''}</span>`;}).join('')}</div>`;
+  }
+  function canAfford(p){return Object.entries(p.eff).every(([k,v])=>state.resources[k]+Math.min(0,v)>=0);}
+  function raster(file,cls='',alt=''){return `<img class="${cls}" src="assets/${file}" alt="${esc(alt)}" draggable="false">`;}
+  function partArt(id,cls=''){const i=M.PARTS.findIndex(p=>p.id===id);return `<span class="part-art ${cls}" role="img" aria-label="${partName(id)}" style="--px:${(i%3)*50}%;--py:${i<3?0:100}%"></span>`;}
+  const SCENES={solar:'scene_moon_day.jpg',water:'scene_control_room.jpg',garden:'scene_greenhouse.jpg',shelter:'scene_control_room.jpg',jade:'scene_moon_day.jpg'};
+  const LOCATIONS={solar:'Sun station',water:'Water room',garden:'Our garden',shelter:'Safe shelter',jade:'Jade’s workshop'};
+  const MOUNTS={battery:[73,58],wheels:[48,80],antenna:[69,22],controller:[30,46],panel:[74,43],insulation:[50,65]};
+  function rover(all=false,cls=''){
+    const fixed=all||state.installed.length===6;
+    return `<div class="jade ${cls}">${raster('story-v5/'+(fixed?'jade.png':'jade-sleep.png'),'jade-image',fixed?'Jade is ready to roll':'Jade is waiting for repairs')}${!all?M.PARTS.map(p=>{const xy=MOUNTS[p.id];return `<span class="repair-status ${state.installed.includes(p.id)?'done':'waiting'}" style="left:${xy[0]}%;top:${xy[1]}%" aria-label="${partName(p.id)} ${state.installed.includes(p.id)?'fixed':'needs fixing'}">${state.installed.includes(p.id)?'✓':'·'}</span>`;}).join(''):''}</div>`;
+  }
+  function palLine(text,expression='talk'){return `<div class="pal-line">${img(current().pal,expression,'pal-face')}<p>${esc(text)}</p>${button('◖))','read','listen',`aria-label="Listen again" title="Listen again"`)}</div>`;}
+  function simpleArt(loc=current().location){if(loc==='jade')return rover();if(loc==='solar')return raster('prop_solar_panel.jpg','hero-prop','Solar panel');if(loc==='water')return raster('prop_water_tank.jpg','hero-prop','Water tank');if(loc==='garden')return raster('prop_potato.jpg','hero-prop','Food from our garden');return raster('prop_helmet.jpg','hero-prop','Our shelter practice');}
+  function homeView(){return `<main id="main" class="home page" tabindex="-1"><section class="cover"><div class="cover-copy"><p class="overline">A little Moon adventure</p><h1>Let’s help<br><em>Jade!</em></h1><p>Our little rover needs a friend.</p>${button(saved?'Keep playing <span aria-hidden="true">→</span>':'Let’s play <span aria-hidden="true">→</span>',saved?'continue':'new','btn play-button')}<span class="cover-note">${saved?'Mission '+saved.day+' · Your place is saved':'Tap. Listen. Play.'}</span></div><div class="cover-art">${rover(false,'cover-jade')}<div class="cover-pal">${img('crawler','happy','')}<span>We can help!</span></div><span class="moon-sticker" aria-hidden="true">✦</span></div></section><footer class="home-foot"><span>Made by Sun Zeyi · Team Little Hero</span>${button('For grown-ups','guide','text-btn')}</footer></main>`;}
+  function stageName(stage){return {brief:'Our mission',plan:'Choose',action:'Let’s do it',quiz:'What helps?',repair:'Fix Jade',summary:'You helped!',drive:'The way home',certificate:'Jade is home!'}[stage]||'';}
+  function choiceArt(p){
+    if(['🔋'].includes(p.icon)||p.title.en.includes('batter'))return partArt('battery');
+    if(['🤝'].includes(p.icon)||p.title.en.includes('together')||p.title.en.includes('hand')||p.title.en.includes('walking'))return `<span class="pair-pals">${img(current().pal,'happy','')}${img(current().pal==='crawler'?'flyer':'crawler','happy','')}</span>`;
+    if(['⚙️','🎛️','💡'].includes(p.icon))return partArt('controller');
+    if(['🧹','☀️'].includes(p.icon))return raster('prop_solar_panel.jpg','choice-picture','Solar panel');
+    if(p.icon==='🧊')return raster('prop_cookies.jpg','choice-picture','Stored food');
+    if(['💧','♻️','🔧'].includes(p.icon))return raster(current().location==='garden'?'prop_potato.jpg':'prop_water_tank.jpg','choice-picture',current().location==='garden'?'Garden':'Water');
+    if(p.icon==='📡'||p.icon==='🚩')return raster('prop_walkie_talkie.jpg','choice-picture','Radio');
+    return raster('scene_control_room.jpg','choice-picture','Safe room');
+  }
+  function pictureChoices(){return `<div class="picture-choices">${current().plans.map(opt=>`<button class="choice-card" data-action="choose" data-id="${opt.id}" ${!canAfford(opt)?'disabled':''}>${choiceArt(opt)}<strong>${esc(pc(opt).title)}</strong>${delta(opt.eff)}${!canAfford(opt)?'<small>Try the other choice</small>':''}</button>`).join('')}</div>`;}
+  function answerArt(a){
+    if(state.day===1)return `<span class="panel-picture ${a.id==='b'?'covered':''}">${raster('prop_solar_panel.jpg','','')}</span>`;
+    if(state.day===10)return a.id==='b'?partArt('panel'):'<span class="answer-symbol" aria-hidden="true">⛵</span>';
+    const files={2:'prop_water_tank.jpg',3:'prop_water_tank.jpg',4:'story-v5/jade.png',5:'scene_control_room.jpg',6:'story-v5/parts.png',7:'prop_water_tank.jpg',8:'story-v5/jade.png',9:'prop_cookies.jpg',11:'story-v5/parts.png',12:'story-v5/parts.png',13:'prop_solar_panel.jpg',14:'scene_moon_day.jpg'};
+    if(a.correct&&[6,11].includes(state.day))return partArt('battery');
+    if(a.correct&&state.day===12)return partArt('insulation');
+    if(a.correct)return raster(files[state.day],'answer-picture','');
+    return `<span class="answer-symbol" aria-hidden="true">${a.icon}</span>`;
+  }
+  function stepAsset(p,n){
+    const icon=p.steps[n].icon,loc=current().location;
+    if(icon==='🔋')return partArt('battery','action-part');
+    if(icon==='🛞')return partArt('wheels','action-part');
+    if(icon==='📡')return raster('prop_walkie_talkie.jpg','action-prop','Radio');
+    if(icon==='🍱')return raster('prop_cookies.jpg','action-prop','Food for our pals');
+    if(icon==='🧥')return partArt('insulation','action-part');
+    if(['⚙️','💡','🎛️','⬆️','🔌'].includes(icon))return partArt('controller','action-part');
+    if(icon==='💧'&&loc!=='garden')return raster('prop_water_tank.jpg','action-prop','Water');
+    if(loc==='solar')return raster('prop_solar_panel.jpg','action-prop','Solar panel');
+    if(loc==='water')return raster('prop_water_tank.jpg','action-prop','Water tank');
+    if(loc==='garden')return raster('prop_potato.jpg','action-prop','Our plants');
+    if(loc==='jade')return rover(false,'action-jade');
+    return raster('scene_control_room.jpg','action-prop','Shelter');
+  }
+  function workbench(){
+    const p=plan(),n=state.steps.length,label=pc().steps[n],icon=p.steps[n].icon;
+    const dirty=/Brush|Clean the panel/.test(label);
+    return `<section class="workbench" aria-label="Hands-on workbench"><div class="action-picture">${stepAsset(p,n)}${dirty?'<div class="dust-spots" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>':''}${n>0?`<div class="done-token" role="status">✓ ${esc(pc().steps[n-1])}</div>`:''}<button class="bench-target next ${state.quiz.help?'guided-target':''}" data-action="step" data-id="${p.steps[n].id}" aria-label="${esc(label)}"><span aria-hidden="true">${icon}</span><b>${esc(label)}</b><span class="tap-hand" aria-hidden="true">☝</span></button></div><div class="step-footer">${dots(n)}<span>Step ${n+1} of 3</span>${button('Help me','hint','text-btn')}</div></section>`;
+  }
+  function repairBench(){const p=part(),xy=MOUNTS[p.id];return `<section class="repair-bench"><div class="repair-rover">${rover()}<button class="mount-point" data-action="install" style="left:${xy[0]}%;top:${xy[1]}%" aria-label="Fit the ${partName(p.id)}"><span aria-hidden="true">＋</span></button></div><div class="part-to-fit">${partArt(p.id)}<strong>${partName(p.id)}</strong><span>Tap ＋ to fit it</span></div></section>`;}
+  function driveScene(){const names=['Go around the crater','Follow the path light','Go home!'];return `<section class="drive-scene"><div class="drive-world">${raster('scene_moon_day.jpg','drive-background','A safe route on the Moon')}<div class="route-track" aria-hidden="true"></div><div class="route-rover" style="left:${6+state.drive*25}%">${rover(true)}</div><button class="route-stop btn" data-action="drive" data-id="${['crater','beacon','home'][state.drive]}">${['↪','⚑','⌂'][state.drive]} ${names[state.drive]}</button></div><div class="step-footer">${dots(state.drive)}<span>${state.drive+1} of 3</span></div></section>`;}
+  function playView(){
+    const m=current(),c=copy(),p=plan();let body='',line='',action='';
+    if(state.stage==='brief'){line=c.brief;body=`<div class="story-scene scene-${m.location}">${m.location==='garden'||m.location==='shelter'?raster(SCENES[m.location],'room-picture',LOCATIONS[m.location]):simpleArt()}${m.location==='solar'?'<span class="sunlight" aria-hidden="true">☀</span>':''}</div>`;action=button('Let’s help <span aria-hidden="true">→</span>','start','btn');}
+    if(state.stage==='plan'){line='Which way shall we help?';body=`<section class="plan-surface">${meters()}${pictureChoices()}${m.plans.every(p=>!canAfford(p))?button('Ask a pal for supplies','supply','btn'):''}</section>`;}
+    if(state.stage==='action'){line=pc().steps[state.steps.length];body=workbench();}
+    if(state.stage==='quiz'){line=state.quiz.wrong?'Let’s look together. '+c.fact:c.fact;body=`<section class="question-surface"><h2 tabindex="-1">${esc(c.question)}</h2><div class="answer-grid">${m.answers.map(a=>`<button class="answer ${state.quiz.help&&a.correct?'hinted':''}" data-action="answer" data-id="${a.id}">${answerArt(a)}<b>${esc(c.options[a.id])}</b>${state.quiz.help&&a.correct?'<span class="hint-mark">← Try this</span>':''}</button>`).join('')}</div>${button('Ask a pal','hint','text-btn')}</section>`;}
+    if(state.stage==='repair'){line='A new '+partName(m.part).toLowerCase()+' for Jade!';body=repairBench();}
+    if(state.stage==='summary'){line=pc().result;body=`<section class="summary-surface"><div class="reward-art">${m.part?partArt(m.part):choiceArt(p)}<span class="reward-check" aria-hidden="true">✓</span></div><h2 tabindex="-1">You helped!</h2>${delta(p.eff,true)}${m.part?`<p>${partName(m.part)} fitted · ${state.installed.length} of 6</p>`:''}</section>`;action=`<div class="summary-actions">${button(state.day===14?'Let’s go home →':'Next mission →','next','btn')}${button('Rest for now','rest','text-btn')}</div>${state.day<14?'<p class="upkeep">Next trip uses 1 ⚡ + 1 💧 + 1 🥬</p>':''}`;}
+    if(state.stage==='drive'){line=['Let’s go around the big crater.','Follow the light. Our pals are near!','Our pals are waiting. Let’s go home!'][state.drive];body=driveScene();}
+    return `<main id="main" class="page play stage-${state.stage}" tabindex="-1"><div class="chapter-line"><span>Mission ${state.day} <small>/ 14</small></span><h1>${esc(c.title)}</h1>${button('Our supplies','supplies','text-btn')}</div><article class="storybook">${body}<div class="story-bottom">${palLine(line,state.stage==='summary'?'wink':'talk')}${action?'<div class="primary-row">'+action+'</div>':''}</div></article>${storageError?'<p class="save-warning" role="status">This browser cannot save. Keep this page open to keep playing.</p>':''}</main>`;
+  }
+  function reunionView(){return `<main id="main" class="page reunion" tabindex="-1"><h1>Jade is home!</h1><p>You helped us, ${esc(state.name)}.</p><div class="reunion-art">${rover(true)}<div class="reunion-pals">${PALS.map(p=>img(p,'wink','')).join('')}</div></div>${button('My keepsake ✦','keepsake','btn')}${button('Rest for now','rest','text-btn')}</main>`;}
+  function certificateView(){if(!keepsake)return reunionView();return `<main id="main" class="certificate-wrap page" tabindex="-1"><article class="certificate"><p>Moon Base Pals</p><h1>You helped Jade!</h1><h2>${esc(state.name)}</h2>${rover(true,'certificate-jade')}<p>You cared for our Moon base.<br>You brought our friend home.</p><div class="cert-stats"><b>14 missions</b><b>6 parts fixed</b><b>1 happy crew</b></div><div class="cert-crew">${PALS.map(p=>img(p,'happy','')).join('')}</div><p class="cert-sign">Sun Zeyi · Team Little Hero · 2026</p><small>A game keepsake. Not NASA certification.</small></article><div class="cert-actions">${button('Print','print','btn')}${button('Home','rest','quiet')}</div></main>`;}
+  function modalView(){
+    if(!modal)return '';let title='',content='';
+    if(modal==='pause'){title='Take a little break';content=`${img(current().pal,'sleep','modal-pal')}<p>We’ll wait right here.</p>${button('Keep playing →','close','btn')}${button('Save & go home','rest','text-btn')}`;}
+    if(modal==='new'){title='Start again?';content=`<p>This replaces your saved journey.</p><label for="commander">Your name <small>(optional)</small></label><input id="commander" maxlength="40" value="${esc(pendingName||state.name)}" autocomplete="off">${button('Start a new journey','confirm-new','btn')}${button('Keep my journey','close','text-btn')}`;}
+    if(modal==='menu'){title='Our little menu';content=`<div class="menu-options">${button(muted?'Sound: off':'Sound: on','mute','quiet')}${button(audioOn?'Read aloud: on':'Read aloud: off','voice-toggle','quiet')}${!home?button('Our supplies','supplies','quiet'):''}${button('How to play','help','quiet')}${button('For grown-ups','guide','quiet')}${saved?button('Start a new journey','new','quiet'):''}${button('Back to play','close','btn')}</div>`;}
+    if(modal==='help'){title='Let’s try together';content=`${img(home?'crawler':current().pal,'happy','modal-pal')}<p>Look for the gold button.<br>Tap it to help!</p><p>Tap ◖)) to hear it again.</p>${!home&&state.stage==='action'?button('Show me this step','demo','btn'):button('Let’s play','close','btn')}`;}
+    if(modal==='supplies'){title='Our supplies';content=meters()+`<p>Each box holds up to 10.</p><h3>Jade’s repairs</h3><div class="repair-list">${M.PARTS.map(p=>`<span>${partArt(p.id)}<b>${partName(p.id)}</b><small>${state.installed.includes(p.id)?'✓ Fitted':'Waiting'}</small></span>`).join('')}</div>`+button('Back to play','close','btn');}
+    if(modal==='guide'){title='For grown-ups';const sources=[...new Map(M.MISSIONS.map(m=>[m.source.url,m.source])).values()];content=`<p>English picture-and-voice play for ages 6–7. Let your child try one short mission, then take a break. Ask “What changed?”</p><p>There are no timers or penalties for a wrong guess. The gold target and Listen button support beginning readers. The voice is synthesized, not a child recording.</p><details><summary>Science and the game model</summary><p>This is a fictional Moon base. Supplies, fast harvests and repair steps are simplified game rules, not spaceflight procedures. Plants need both water and light. Mission numbers are not lunar day-night cycles. Shelter practice is not live space weather.</p><p>${esc(L(current().fact))}</p><ul>${sources.map(s=>`<li><a href="${esc(s.url)}" target="_blank" rel="noopener noreferrer">${esc(s.label)} ↗</a></li>`).join('')}</ul></details><details><summary>About this game</summary><p>Created by Sun Zeyi · Team Little Hero. Not an official NASA product. The actual competition challenge selection remains unverified.</p><p>All game art and voices are stored locally. Progress stays in this browser. No trackers. This version has not yet been tested with real children; reading ease, enjoyment and learning are not certified.</p><p>Jade’s six dots show which replacement parts have been fitted. The artwork shows the old parts before replacement. At six repairs, Jade wakes up.</p></details>${button('Back','close','btn')}`;}
+    return `<div class="overlay-backdrop"><section class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-heading"><div class="modal-top"><h2 id="modal-heading">${title}</h2>${button('×','close','close',`aria-label="Close and continue"`)}</div>${content}</section></div>`;
+  }
+
+  function setModal(which){
+    lastFocus=document.activeElement?.dataset?.action||null;modal=which;paused=true;selectedTool=false;stopSound();render();
+    root.querySelector('.modal button')?.focus();
+  }
+  function closeModal(){modal=null;paused=false;render();if(lastFocus)root.querySelector(`[data-action="${lastFocus}"]`)?.focus();}
+  function render(){
+    document.documentElement.lang='en';
+    root.innerHTML=`<div class="world-bg"></div><div class="star-grain"></div>${header()}${textNotice()?`<div class="page"><div class="notification" role="status">${esc(textNotice())}</div></div>`:''}${home?homeView():state.stage==='certificate'?certificateView():playView()}${modalView()}<div id="toast" class="toast" role="status"></div>`;
+    if(modal){root.querySelector('main')?.setAttribute('inert','');root.querySelector('header')?.setAttribute('inert','');}
+  }
+  function startNew(){
+    const input=$('commander');const name=(input?.value??pendingName??state.name).trim().slice(0,40)||'Sun Zeyi';
+    state=M.create(name,'en');home=false;modal=null;paused=false;notice='';selectedTool=false;pendingName=null;keepsake=false;persist();render();window.scrollTo({top:0,behavior:'instant'});narrate();
+  }
+  root.addEventListener('click',e=>{
+    const b=e.target.closest('[data-action]');if(!b||!root.contains(b)||b.disabled)return;
+    const action=b.dataset.action,id=b.dataset.id;
+    if(paused&&!b.closest('.modal'))return;
+    if(['start','choose','step','answer','install','next','drive','guided','supply'].includes(action)){
+      const now=performance.now();if(now-inputAt<230&&action===lastAction&&id===lastId)return;inputAt=now;lastAction=action;lastId=id;
+    }
+    if(action==='new'){pendingName=$('commander')?.value||state.name;if(saved||notice==='damaged')setModal('new');else startNew();}
+    else if(action==='confirm-new')startNew();
+    else if(action==='continue'){state=saved;home=false;paused=false;modal=null;render();narrate();}
+    else if(action==='mute'){muted=!muted;if(muted)stopSound();else{ensureAudio();if(master)master.gain.setValueAtTime(.17,context.currentTime);}prefsSave();render();if(!muted&&!home)narrate();}
+    else if(action==='voice-toggle'){audioOn=!audioOn;cancelVoice();prefsSave();render();}
+    else if(action==='help'||action==='guide'||action==='pause'||action==='menu'||action==='supplies')setModal(action);
+    else if(action==='close')closeModal();
+    else if(action==='rest'||action==='home'){cancelVoice();if(!home)persist();home=true;modal=null;paused=false;peek='';render();}
+    else if(action==='start')submit({type:'START_DAY'});
+    else if(action==='choose')submit({type:'CHOOSE_PLAN',id});
+    else if(action==='step')submit({type:'STEP',id});
+    else if(action==='answer')submit({type:'ANSWER',id});
+    else if(action==='hint'){submit({type:'HINT'});if(state.stage==='action'){root.querySelector('.bench-target.next')?.focus();toast('Tap the gold button.');}}
+    else if(action==='guided'){submit({type:'HINT'});const next=plan()?.steps.find(s=>!state.steps.includes(s.id));if(next){submit({type:'STEP',id:next.id});toast(t('我们一起完成了这一步。下一步，你来试试。','We did that step together. Try the next one.'));}}
+    else if(action==='supply')submit({type:'SUPPLY'});
+    else if(action==='install')submit({type:'INSTALL',id:current().part});
+    else if(action==='next')submit({type:'NEXT_DAY'});
+    else if(action==='drive')submit({type:'DRIVE',id});
+    else if(action==='demo'){closeModal();submit({type:'HINT'});root.querySelector('.bench-target.next')?.focus();narrate(true);}
+    else if(action==='tool'){selectedTool=!selectedTool;render();if(selectedTool)toast(t('工具拿好了。点击或拖到金色边框的物体。','Tool ready. Tap or drag to the gold-outlined object.'));}
+    else if(action==='read')narrate(true);
+    else if(action==='keepsake'){keepsake=true;render();window.scrollTo({top:0,behavior:'instant'});}
+    else if(action==='print'){cancelVoice();window.print();}
+  });
+  root.addEventListener('dragstart',e=>{if(paused||home||!e.target.closest('.held-tool')){e.preventDefault();return;}selectedTool=true;e.dataTransfer.setData('text/plain','moon-tool');e.dataTransfer.effectAllowed='copy';});
+  root.addEventListener('dragover',e=>{if(!paused&&e.target.closest('.bench-target.next')){e.preventDefault();e.dataTransfer.dropEffect='copy';}});
+  root.addEventListener('drop',e=>{const target=e.target.closest('.bench-target.next');if(!target||paused||e.dataTransfer.getData('text/plain')!=='moon-tool')return;e.preventDefault();submit({type:'STEP',id:target.dataset.id});});
+  root.addEventListener('error',e=>{const image=e.target;if(image.tagName!=='IMG'||image.dataset.failed)return;image.dataset.failed='true';image.classList.add('asset-fallback');image.alt=image.dataset.fallback||image.alt||'Pal';image.removeAttribute('src');},true);
+  document.addEventListener('keydown',e=>{
+    if(e.key==='Escape'){if(modal)closeModal();else if(!home)setModal('pause');return;}
+    if(e.key==='Tab'&&modal){const focusable=[...root.querySelectorAll('.modal button,.modal a,.modal input,.modal summary')].filter(e=>!e.disabled);const first=focusable[0],last=focusable.at(-1);if(e.shiftKey&&document.activeElement===first){e.preventDefault();last?.focus();}else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first?.focus();}}
+  });
+  document.addEventListener('visibilitychange',()=>{if(document.hidden){stopSound();if(!home&&!modal)setModal('pause');}});
+  window.addEventListener('pagehide',()=>{cancelVoice();if(!home)persist();});
+  render();
+})();
+</script>
+</body>
+</html>

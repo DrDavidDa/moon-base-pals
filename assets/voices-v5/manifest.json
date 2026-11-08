@@ -1,0 +1,1055 @@
+{
+  "generatedAt": "2026-10-22T10:31:40.717Z",
+  "entries": [
+    {
+      "key": "a9dc246121fd5d49793c39793fd2dbd55202c2df",
+      "text": "Jade needs our help. Let’s light the workbench! Tap Let’s help.",
+      "lang": "en",
+      "path": "assets/voices-v5/a9dc246121fd5d49793c39793fd2dbd55202c2df.wav"
+    },
+    {
+      "key": "683c8aaea23ef882c4beee77b08be5854c5452d9",
+      "text": "Which way shall we help? Brush the Panel. Use 1 water. Or, Bring a Battery. Use 1 food. ",
+      "lang": "en",
+      "path": "assets/voices-v5/683c8aaea23ef882c4beee77b08be5854c5452d9.wav"
+    },
+    {
+      "key": "71f6bcb404f1c5bb6d5985dd57144992dadf7488",
+      "text": "Unplug it. Pack drinking water. Tap the gold button.",
+      "lang": "en",
+      "path": "assets/voices-v5/71f6bcb404f1c5bb6d5985dd57144992dadf7488.wav"
+    },
+    {
+      "key": "7d818d6f97a65a548e1af8af41a459e2408e8a21",
+      "text": "Brush off the dust. Tap the gold button.",
+      "lang": "en",
+      "path": "assets/voices-v5/7d818d6f97a65a548e1af8af41a459e2408e8a21.wav"
+    },
+    {
+      "key": "2a639254683a59a11945c25f4a8d506517e700c2",
+      "text": "Plug in the workbench. Tap the gold button.",
+      "lang": "en",
+      "path": "assets/voices-v5/2a639254683a59a11945c25f4a8d506517e700c2.wav"
+    },
+    {
+      "key": "a486dfa3b6fd4e01e54284343472afdc19d3f0f6",
+      "text": "Solar panels turn sunlight into power. Dust blocks the light. The Moon has no air wind. Which panel gets more sunlight? The clean panel. Or, The covered panel.",
+      "lang": "en",
+      "path": "assets/voices-v5/a486dfa3b6fd4e01e54284343472afdc19d3f0f6.wav"
+    },
+    {
+      "key": "c1b7d2eb27f8907cc9c21335dcade9ec032c6a6b",
+      "text": "Let’s look together. Solar panels turn sunlight into power. Dust blocks the light. The Moon has no air wind. Try: The clean panel.",
+      "lang": "en",
+      "path": "assets/voices-v5/c1b7d2eb27f8907cc9c21335dcade9ec032c6a6b.wav"
+    },
+    {
+      "key": "0f216b82fb37e50299766317078e36d88575c0bd",
+      "text": "The clean panel makes power. Our helper has a drink. You helped! Play the next mission, or rest for now. The next trip uses one power, one water, and one food.",
+      "lang": "en",
+      "path": "assets/voices-v5/0f216b82fb37e50299766317078e36d88575c0bd.wav"
+    },
+    {
+      "key": "d82f2cac91a980241ebbf305ed249aeecf4006bc",
+      "text": "Drip, drip! Help Flyer fix the water tank. Tap Let’s help.",
+      "lang": "en",
+      "path": "assets/voices-v5/d82f2cac91a980241ebbf305ed249aeecf4006bc.wav"
+    },
+    {
+      "key": "0ade68f6377f3c024e5a5ec18e2daaacd620a267",
+      "text": "Which way shall we help? Fix the Leak. Use 1 power. Or, Clean More Water. Use 2 power. ",
+      "lang": "en",
+      "path": "assets/voices-v5/0ade68f6377f3c024e5a5ec18e2daaacd620a267.wav"
+    },
+    {
+      "key": "205ffe5b7edcabaac1212c00667b98160282cdd4",
+      "text": "Turn off the water. Tap the gold button.",
+      "lang": "en",
+      "path": "assets/voices-v5/205ffe5b7edcabaac1212c00667b98160282cdd4.wav"
+    },
+    {
+      "key": "d3d5d1235eae19d68882accfedc0aa1774affcd9",
+      "text": "Fit the sealing ring. Tap the gold button.",
+      "lang": "en",
+      "path": "assets/voices-v5/d3d5d1235eae19d68882accfedc0aa1774affcd9.wav"
+    },
+    {
+      "key": "9716297d7874eb0c58707b20e050d7033c8f5393",
+      "text": "Turn on. Check for drips. Tap the gold button.",
+      "lang": "en",
+      "path": "assets/voices-v5/9716297d7874eb0c58707b20e050d7033c8f5393.wav"
+    },
+    {
+      "key": "dc8dd0f68787dcd981bf73c8f4d6ce0622f36aea",
+      "text": "Used water needs cleaning and checking before we can drink it again. How can we use old water again? Drink it now. Or, Clean it and check it.",
+      "lang": "en",
+      "path": "assets/voices-v5/dc8dd0f68787dcd981bf73c8f4d6ce0622f36aea.wav"
+    },
+    {
+      "key": "47785201fc3482880d70e49760eb78c6a1acc2cf",
+      "text": "Let’s look together. Used water needs cleaning and checking before we can drink it again. Try: Clean it and check it.",
+      "lang": "en",
+      "path": "assets/voices-v5/47785201fc3482880d70e49760eb78c6a1acc2cf.wav"
+    },
+    {
+      "key": "8564a1d79c16032b2dc0f6713ac703926e95ed86",
+      "text": "A new battery for Jade! Tap the plus to fit it.",
+      "lang": "en",
+      "path": "assets/voices-v5/8564a1d79c16032b2dc0f6713ac703926e95ed86.wav"
+    },
+    {
+      "key": "cf9641351d4917cadbd8fd201a9e70e274ebcde9",
+      "text": "No more drips! Water stays in our tank. You helped! Play the next mission, or rest for now. The next trip uses one power, one water, and one food.",
+      "lang": "en",
+      "path": "assets/voices-v5/cf9641351d4917cadbd8fd201a9e70e274ebcde9.wav"
+    },
+    {
+      "key": "4de880766e6e7615127b1dd35c22eccbeb5273b9",
+      "text": "Help Bread care for plants and pick the big leaves. Tap Let’s help.",
+      "lang": "en",
+      "path": "assets/voices-v5/4de880766e6e7615127b1dd35c22eccbeb5273b9.wav"
+    },
+    {
+      "key": "36ce6f330b216cb150c2774b871907f4c51ab9fa",
+      "text": "Which way shall we help? Water the Plants. Use 2 water. Or, Use the Light. Use 2 power. ",
+      "lang": "en",
+      "path": "assets/voices-v5/36ce6f330b216cb150c2774b871907f4c51ab9fa.wav"
+    },
+    {
+      "key": "7f4ac35dff80f8ef125fe17098769fef294e0c6a",
+      "text": "Check the dry soil sign. Tap the gold button.",
+      "lang": "en",
+      "path": "assets/voices-v5/7f4ac35dff80f8ef125fe17098769fef294e0c6a.wav"
+    },
+    {
+      "key": "f30eb016003f440785a2478bc22862570a3c855b",
+      "text": "Water the roots slowly. Tap the gold button.",
+      "lang": "en",
+      "path": "assets/voices-v5/f30eb016003f440785a2478bc22862570a3c855b.wav"
+    },
+    {
+      "key": "3b610fae50322237e96c13173e94d34c929b5f31",
+      "text": "Put ready leaves in the basket. Tap the gold button.",
+      "lang": "en",
+      "path": "assets/voices-v5/3b610fae50322237e96c13173e94d34c929b5f31.wav"
+    },
+    {
+      "key": "2c68175d8326c4ee2d608deb4616039348ff5517",
+      "text": "Plants need water and light. Growing takes time. We pick leaves that are already ready. The roots are dry. What helps? A little water. Or, Just a star sticker.",
+      "lang": "en",
+      "path": "assets/voices-v5/2c68175d8326c4ee2d608deb4616039348ff5517.wav"
+    },
+    {
+      "key": "1be11016c435db1e7250306420c241334cd2d3aa",
+      "text": "Let’s look together. Plants need water and light. Growing takes time. We pick leaves that are already ready. Try: A little water.",
+      "lang": "en",
+      "path": "assets/voices-v5/1be11016c435db1e7250306420c241334cd2d3aa.wav"
+    },
+    {
+      "key": "b42bd522eef06f239762b30e6561312d619c221a",
+      "text": "We water the roots and pick leaves ready to eat. You helped! Play the next mission, or rest for now. The next trip uses one power, one water, and one food.",
+      "lang": "en",
+      "path": "assets/voices-v5/b42bd522eef06f239762b30e6561312d619c221a.wav"
+    },
+    {
+      "key": "844dd832b3b8239eb5193816830a279988d01dc0",
+      "text": "Let’s get new wheels ready for Jade! Tap Let’s help.",
+      "lang": "en",
+      "path": "assets/voices-v5/844dd832b3b8239eb5193816830a279988d01dc0.wav"
+    },
+    {
+      "key": "4456a39c3a5ab42777ccac1caba0faa857e3259e",
+      "text": "Which way shall we help? Use the Lift. Use 2 power. Or, Carry Together. Use 1 water and 1 food. ",
+      "lang": "en",
+      "path": "assets/voices-v5/4456a39c3a5ab42777ccac1caba0faa857e3259e.wav"
+    },
+    {
+      "key": "3da731524906f702130ad6623cd6c9ef93de7bd7",
+      "text": "Put the lift under Jade. Tap the gold button.",
+      "lang": "en",
+      "path": "assets/voices-v5/3da731524906f702130ad6623cd6c9ef93de7bd7.wav"
+    },
+    {
+      "key": "c77200f221facf149365878909920cd5b63579ae",
+      "text": "Lift Jade up. Tap the gold button.",
+      "lang": "en",
+      "path": "assets/voices-v5/c77200f221facf149365878909920cd5b63579ae.wav"
+    },
+    {
+      "key": "46b430e203f1d469dacc8df669668274f4929a6f",
+      "text": "Bring the wheels to Jade. Tap the gold button.",
+      "lang": "en",
+      "path": "assets/voices-v5/46b430e203f1d469dacc8df669668274f4929a6f.wav"
+    },
+    {
+      "key": "7ae2bed8d1f5f1ad59156593bc75f87cefa9a13e",
+      "text": "Moon dust can make driving tricky. Check for rocks before Jade drives. A big rock blocks Jade. What first? Drive with eyes shut. Or, Check and clear the path.",
+      "lang": "en",
+      "path": "assets/voices-v5/7ae2bed8d1f5f1ad59156593bc75f87cefa9a13e.wav"
+    },
+    {
+      "key": "336b1b082c212d873dbd281cc68df98dde1f1ec0",
+      "text": "Let’s look together. Moon dust can make driving tricky. Check for rocks before Jade drives. Try: Check and clear the path.",
+      "lang": "en",
+      "path": "assets/voices-v5/336b1b082c212d873dbd281cc68df98dde1f1ec0.wav"
+    },
+    {
+      "key": "5a8e68705101f366be043ec0b3887eeabc152d15",
+      "text": "A new wheels for Jade! Tap the plus to fit it.",
+      "lang": "en",
+      "path": "assets/voices-v5/5a8e68705101f366be043ec0b3887eeabc152d15.wav"
+    },
+    {
+      "key": "c1c58cf33369b053fbfeabb85f18228c5fc9e055",
+      "text": "The lift uses power to hold Jade safely. You helped! Play the next mission, or rest for now. The next trip uses one power, one water, and one food.",
+      "lang": "en",
+      "path": "assets/voices-v5/c1c58cf33369b053fbfeabb85f18228c5fc9e055.wav"
+    },
+    {
+      "key": "e17378e50ece1c6c6b93fef34135abde5ce66cf0",
+      "text": "It’s a practice drill. Help Balloon find a safe shelter. Tap Let’s help.",
+      "lang": "en",
+      "path": "assets/voices-v5/e17378e50ece1c6c6b93fef34135abde5ce66cf0.wav"
+    },
+    {
+      "key": "0be87f8e664224b91931f968c969e7b76251b25a",
+      "text": "Which way shall we help? Power the Shelter. Use 1 power. Or, Stay Inside. Use 1 water and 1 food. ",
+      "lang": "en",
+      "path": "assets/voices-v5/0be87f8e664224b91931f968c969e7b76251b25a.wav"
+    },
+    {
+      "key": "d64b57f20c1e39e9640ed6161abfb3514d537ba8",
+      "text": "Check the thick shield sign. Tap the gold button.",
+      "lang": "en",
+      "path": "assets/voices-v5/d64b57f20c1e39e9640ed6161abfb3514d537ba8.wav"
+    },
+    {
+      "key": "490a6dcab6104593605302c7c69f8f8db78627c8",
+      "text": "Turn on the shelter’s air system. Tap the gold button.",
+      "lang": "en",
+      "path": "assets/voices-v5/490a6dcab6104593605302c7c69f8f8db78627c8.wav"
+    },
+    {
+      "key": "25afdfe8266531aaf50fb0a5c2fe8aafbbf83ad6",
+      "text": "Take our pals inside. Tap the gold button.",
+      "lang": "en",
+      "path": "assets/voices-v5/25afdfe8266531aaf50fb0a5c2fe8aafbbf83ad6.wav"
+    },
+    {
+      "key": "bb0222b9e05dadf2349425aa0c493c7701df929a",
+      "text": "Thick shielding helps protect our pals from space radiation. A door alone cannot do that. Where can our pals find protection? Inside the thick shielded shelter. Or, Outside on the open Moon.",
+      "lang": "en",
+      "path": "assets/voices-v5/bb0222b9e05dadf2349425aa0c493c7701df929a.wav"
+    },
+    {
+      "key": "d3d8d32b525c3e75bb2c657271e1a93dfa50119f",
+      "text": "Let’s look together. Thick shielding helps protect our pals from space radiation. A door alone cannot do that. Try: Inside the thick shielded shelter.",
+      "lang": "en",
+      "path": "assets/voices-v5/d3d8d32b525c3e75bb2c657271e1a93dfa50119f.wav"
+    },
+    {
+      "key": "c4ffa63d02b36b43c570ed0498e8d7e0e264cfdb",
+      "text": "The shelter uses power. Our pals are inside. You helped! Play the next mission, or rest for now. The next trip uses one power, one water, and one food.",
+      "lang": "en",
+      "path": "assets/voices-v5/c4ffa63d02b36b43c570ed0498e8d7e0e264cfdb.wav"
+    },
+    {
+      "key": "18e64f579a4033e583da8e56cfa53af5174cfce2",
+      "text": "Help Flyer get Jade’s radio ready. Tap Let’s help.",
+      "lang": "en",
+      "path": "assets/voices-v5/18e64f579a4033e583da8e56cfa53af5174cfce2.wav"
+    },
+    {
+      "key": "071241fac0d1ad43b6957b322077231e8f79230b",
+      "text": "Which way shall we help? Charge the Workbench. Use 1 power. Or, Bring Backup Power. Use 1 water and 1 food. ",
+      "lang": "en",
+      "path": "assets/voices-v5/071241fac0d1ad43b6957b322077231e8f79230b.wav"
+    },
+    {
+      "key": "5bc42e04a09990466b22669936170b02950a7f6c",
+      "text": "Plug in the charging cable. Tap the gold button.",
+      "lang": "en",
+      "path": "assets/voices-v5/5bc42e04a09990466b22669936170b02950a7f6c.wav"
+    },
+    {
+      "key": "aaffd0a92e9dd03dc1d0bd48af06d5f798f3f7c9",
+      "text": "Turn on the charger. Tap the gold button.",
+      "lang": "en",
+      "path": "assets/voices-v5/aaffd0a92e9dd03dc1d0bd48af06d5f798f3f7c9.wav"
+    },
+    {
+      "key": "097a2cb8fe9317890bde324bcacf65dc143846ef",
+      "text": "Check the power light. Tap the gold button.",
+      "lang": "en",
+      "path": "assets/voices-v5/097a2cb8fe9317890bde324bcacf65dc143846ef.wav"
+    },
+    {
+      "key": "e30dce011331e51b326619161b29fd878dab6bcf",
+      "text": "Jade’s radio needs power. A solar panel makes power. A battery stores it. What helps Jade’s radio work? Unplug the power. Or, Check the power plug.",
+      "lang": "en",
+      "path": "assets/voices-v5/e30dce011331e51b326619161b29fd878dab6bcf.wav"
+    },
+    {
+      "key": "ab36798c68ca1e82bd0848e4c236dd547986d9e0",
+      "text": "Let’s look together. Jade’s radio needs power. A solar panel makes power. A battery stores it. Try: Check the power plug.",
+      "lang": "en",
+      "path": "assets/voices-v5/ab36798c68ca1e82bd0848e4c236dd547986d9e0.wav"
+    },
+    {
+      "key": "729685bd8ec00e33587a075d021c48944bdd2a80",
+      "text": "A new antenna for Jade! Tap the plus to fit it.",
+      "lang": "en",
+      "path": "assets/voices-v5/729685bd8ec00e33587a075d021c48944bdd2a80.wav"
+    },
+    {
+      "key": "34bbdda032c1966d08cf02ae83f54f8baed089b5",
+      "text": "The workbench has power. Jade’s antenna can go on! You helped! Play the next mission, or rest for now. The next trip uses one power, one water, and one food.",
+      "lang": "en",
+      "path": "assets/voices-v5/34bbdda032c1966d08cf02ae83f54f8baed089b5.wav"
+    },
+    {
+      "key": "1ce9eff96514f88009e4d5ef2b5ec39c20210652",
+      "text": "Flyer needs water for our plants and repair jobs. Tap Let’s help.",
+      "lang": "en",
+      "path": "assets/voices-v5/1ce9eff96514f88009e4d5ef2b5ec39c20210652.wav"
+    },
+    {
+      "key": "8929243b9c68b0325df60416d34eee9753ced8c9",
+      "text": "Which way shall we help? Clean Used Water. Use 2 power. Or, Bring Water Bags. Use 1 food. ",
+      "lang": "en",
+      "path": "assets/voices-v5/8929243b9c68b0325df60416d34eee9753ced8c9.wav"
+    },
+    {
+      "key": "b9098a545849e2eb31d8f7119b3176dc9c5e0ff4",
+      "text": "Connect the used water tank. Tap the gold button.",
+      "lang": "en",
+      "path": "assets/voices-v5/b9098a545849e2eb31d8f7119b3176dc9c5e0ff4.wav"
+    },
+    {
+      "key": "59363be5f80ad6ab968918c69420f502d20232e7",
+      "text": "Turn on the water cleaner. Tap the gold button.",
+      "lang": "en",
+      "path": "assets/voices-v5/59363be5f80ad6ab968918c69420f502d20232e7.wav"
+    },
+    {
+      "key": "1fa47979b7a926c1e709d435eeb1eec54e4c2bf9",
+      "text": "Check the water. Fill our tank. Tap the gold button.",
+      "lang": "en",
+      "path": "assets/voices-v5/1fa47979b7a926c1e709d435eeb1eec54e4c2bf9.wav"
+    },
+    {
+      "key": "ab1ead6177df800992002a45f05b70282b9a0b19",
+      "text": "We use power to clean water for our tank. You helped! Play the next mission, or rest for now. The next trip uses one power, one water, and one food.",
+      "lang": "en",
+      "path": "assets/voices-v5/ab1ead6177df800992002a45f05b70282b9a0b19.wav"
+    },
+    {
+      "key": "3bdbe37ffabb424321385e2587e7b2326abd58e6",
+      "text": "Count the sealed water bags. Tap the gold button.",
+      "lang": "en",
+      "path": "assets/voices-v5/3bdbe37ffabb424321385e2587e7b2326abd58e6.wav"
+    },
+    {
+      "key": "7dbde3ef9a6b97874c4d1f3be63d3d8275831a22",
+      "text": "Put them on the rack. Tap the gold button.",
+      "lang": "en",
+      "path": "assets/voices-v5/7dbde3ef9a6b97874c4d1f3be63d3d8275831a22.wav"
+    },
+    {
+      "key": "c74ff407f54ac21de91a0462652603396a71d8db",
+      "text": "Connect the bags. Set out food. Tap the gold button.",
+      "lang": "en",
+      "path": "assets/voices-v5/c74ff407f54ac21de91a0462652603396a71d8db.wav"
+    },
+    {
+      "key": "e998b4d6ea69055abb01d3f7aecec01dd014cae2",
+      "text": "Cleaning used water takes power. Our water and power can both run low. What does our water cleaner need? Water and power. Or, Water, but no power.",
+      "lang": "en",
+      "path": "assets/voices-v5/e998b4d6ea69055abb01d3f7aecec01dd014cae2.wav"
+    },
+    {
+      "key": "7dd136bb77043a4efbcedeb958453d173bae43bb",
+      "text": "Let’s look together. Cleaning used water takes power. Our water and power can both run low. Try: Water and power.",
+      "lang": "en",
+      "path": "assets/voices-v5/7dd136bb77043a4efbcedeb958453d173bae43bb.wav"
+    },
+    {
+      "key": "e012492fd5260bff10fa299330b77b9967bb7689",
+      "text": "Our pals bring stored water and use a snack. You helped! Play the next mission, or rest for now. The next trip uses one power, one water, and one food.",
+      "lang": "en",
+      "path": "assets/voices-v5/e012492fd5260bff10fa299330b77b9967bb7689.wav"
+    },
+    {
+      "key": "58af5a26d4e89ef45f891c80dcd64db9f6b0e6cd",
+      "text": "Jade needs controls. Help Crawler check the plugs. Tap Let’s help.",
+      "lang": "en",
+      "path": "assets/voices-v5/58af5a26d4e89ef45f891c80dcd64db9f6b0e6cd.wav"
+    },
+    {
+      "key": "7d9c015148efcac651dcf307554e30c102d5a0dc",
+      "text": "Which way shall we help? Use the Test Bench. Use 1 power. Or, Check Together. Use 1 water and 1 food. ",
+      "lang": "en",
+      "path": "assets/voices-v5/7d9c015148efcac651dcf307554e30c102d5a0dc.wav"
+    },
+    {
+      "key": "8fb49561d58765272447ed77a505c55b5a82de3f",
+      "text": "Hold Jade safely on the stand. Tap the gold button.",
+      "lang": "en",
+      "path": "assets/voices-v5/8fb49561d58765272447ed77a505c55b5a82de3f.wav"
+    },
+    {
+      "key": "87110f5e4fbee41f1b0b833ca574808ec6657589",
+      "text": "Connect the test plug. Tap the gold button.",
+      "lang": "en",
+      "path": "assets/voices-v5/87110f5e4fbee41f1b0b833ca574808ec6657589.wav"
+    },
+    {
+      "key": "4d947334142c684f541f24fca5d7590a3fdbf1d3",
+      "text": "Turn on the check light. Tap the gold button.",
+      "lang": "en",
+      "path": "assets/voices-v5/4d947334142c684f541f24fca5d7590a3fdbf1d3.wav"
+    },
+    {
+      "key": "ab331ca19b769cf0e548cf42c3632d58ee9ed244",
+      "text": "The test bench uses power to check Jade’s plugs. You helped! Play the next mission, or rest for now. The next trip uses one power, one water, and one food.",
+      "lang": "en",
+      "path": "assets/voices-v5/ab331ca19b769cf0e548cf42c3632d58ee9ed244.wav"
+    },
+    {
+      "key": "a469e8c2e207d25096dfb0a2d383aa639a006859",
+      "text": "Lay out the plug picture. Tap the gold button.",
+      "lang": "en",
+      "path": "assets/voices-v5/a469e8c2e207d25096dfb0a2d383aa639a006859.wav"
+    },
+    {
+      "key": "d2b138fec3c8328410142772427237688c98c4c8",
+      "text": "Match each plug to the picture. Tap the gold button.",
+      "lang": "en",
+      "path": "assets/voices-v5/d2b138fec3c8328410142772427237688c98c4c8.wav"
+    },
+    {
+      "key": "fb0a1d67a3f03972a50ab0a616d3f72aa6eae7d5",
+      "text": "Give our pals water and food. Tap the gold button.",
+      "lang": "en",
+      "path": "assets/voices-v5/fb0a1d67a3f03972a50ab0a616d3f72aa6eae7d5.wav"
+    },
+    {
+      "key": "addb905c9d1c1900df649f79e3e8b7aa51e8a7a3",
+      "text": "We test Jade’s wheels on a safe stand before she drives. Where should we first test Jade’s wheels? On a rocky hill. Or, On the safe stand.",
+      "lang": "en",
+      "path": "assets/voices-v5/addb905c9d1c1900df649f79e3e8b7aa51e8a7a3.wav"
+    },
+    {
+      "key": "191f756599ee24824cade748e70ad88b6b2d17e7",
+      "text": "Let’s look together. We test Jade’s wheels on a safe stand before she drives. Try: On the safe stand.",
+      "lang": "en",
+      "path": "assets/voices-v5/191f756599ee24824cade748e70ad88b6b2d17e7.wav"
+    },
+    {
+      "key": "039bf9cf1a2b11be21dc98772b3391f221734bf7",
+      "text": "A new controls for Jade! Tap the plus to fit it.",
+      "lang": "en",
+      "path": "assets/voices-v5/039bf9cf1a2b11be21dc98772b3391f221734bf7.wav"
+    },
+    {
+      "key": "8aaf1558591f2af82bda30ce2479cd516a0692b0",
+      "text": "Our pals check each plug, then have water and food. You helped! Play the next mission, or rest for now. The next trip uses one power, one water, and one food.",
+      "lang": "en",
+      "path": "assets/voices-v5/8aaf1558591f2af82bda30ce2479cd516a0692b0.wav"
+    },
+    {
+      "key": "477dbafa0d26fb1be46c20bc6c990148f203ec4c",
+      "text": "Bread wants to pack lunch for Jade’s helpers. Tap Let’s help.",
+      "lang": "en",
+      "path": "assets/voices-v5/477dbafa0d26fb1be46c20bc6c990148f203ec4c.wav"
+    },
+    {
+      "key": "85174fa99c33136c3813f918fb99f186a35e7f6f",
+      "text": "Which way shall we help? Water and Pick. Use 2 water. Or, Pack Stored Food. Use 1 power. ",
+      "lang": "en",
+      "path": "assets/voices-v5/85174fa99c33136c3813f918fb99f186a35e7f6f.wav"
+    },
+    {
+      "key": "50d2c7f97c388f6f1d3f1ce4cb273b9449b52ab9",
+      "text": "Water the roots. Tap the gold button.",
+      "lang": "en",
+      "path": "assets/voices-v5/50d2c7f97c388f6f1d3f1ce4cb273b9449b52ab9.wav"
+    },
+    {
+      "key": "2075bf5a863bede404ebcbc3203d2e2c0b041a48",
+      "text": "Pick the ready leaves. Tap the gold button.",
+      "lang": "en",
+      "path": "assets/voices-v5/2075bf5a863bede404ebcbc3203d2e2c0b041a48.wav"
+    },
+    {
+      "key": "9936c5b89771907ede31cf65c3c21981965f34f2",
+      "text": "Pack our pals’ lunch boxes. Tap the gold button.",
+      "lang": "en",
+      "path": "assets/voices-v5/9936c5b89771907ede31cf65c3c21981965f34f2.wav"
+    },
+    {
+      "key": "7ae17675667f00eef8cda63ba104cd0279448a69",
+      "text": "Plants take time to grow. Space crews keep stored food too. What is a good food plan? Grow plants and store food. Or, Eat seeds we just planted.",
+      "lang": "en",
+      "path": "assets/voices-v5/7ae17675667f00eef8cda63ba104cd0279448a69.wav"
+    },
+    {
+      "key": "71c19575fcd751222f0344bede22d102461a1ac8",
+      "text": "Let’s look together. Plants take time to grow. Space crews keep stored food too. Try: Grow plants and store food.",
+      "lang": "en",
+      "path": "assets/voices-v5/71c19575fcd751222f0344bede22d102461a1ac8.wav"
+    },
+    {
+      "key": "67448c2e3f2d8d7415a28cf9a755f3f6189df8e6",
+      "text": "We use water and pack leaves ready to eat. You helped! Play the next mission, or rest for now. The next trip uses one power, one water, and one food.",
+      "lang": "en",
+      "path": "assets/voices-v5/67448c2e3f2d8d7415a28cf9a755f3f6189df8e6.wav"
+    },
+    {
+      "key": "36b8baee48bbf65ca9dfc1d351861153b1fd238c",
+      "text": "Help Balloon get Jade’s solar panel ready. Tap Let’s help.",
+      "lang": "en",
+      "path": "assets/voices-v5/36b8baee48bbf65ca9dfc1d351861153b1fd238c.wav"
+    },
+    {
+      "key": "01e5bca9622bf090e2d993e40b085fb20181861f",
+      "text": "Which way shall we help? Use the Machine. Or, Open It Together. Use 1 water and 1 food. ",
+      "lang": "en",
+      "path": "assets/voices-v5/01e5bca9622bf090e2d993e40b085fb20181861f.wav"
+    },
+    {
+      "key": "dd09e41ffd91818ed8b332d2aee9b9d079ba4db8",
+      "text": "Put the folded panel in place. Tap the gold button.",
+      "lang": "en",
+      "path": "assets/voices-v5/dd09e41ffd91818ed8b332d2aee9b9d079ba4db8.wav"
+    },
+    {
+      "key": "e20d437e83288e90b4ecf4f6d22ec83fcd70c3a1",
+      "text": "Turn on the opening motor. Tap the gold button.",
+      "lang": "en",
+      "path": "assets/voices-v5/e20d437e83288e90b4ecf4f6d22ec83fcd70c3a1.wav"
+    },
+    {
+      "key": "e589bbc3e545455142dd65d7c05ed40d6861c0f9",
+      "text": "Plug in the spare battery. Tap the gold button.",
+      "lang": "en",
+      "path": "assets/voices-v5/e589bbc3e545455142dd65d7c05ed40d6861c0f9.wav"
+    },
+    {
+      "key": "56b62509311a3c03ba6b143fd4e617abf64a5ad4",
+      "text": "A solar panel turns sunlight into power. A solar sail uses light to push a spacecraft. What can make power from sunlight? A solar sail. Or, A solar panel.",
+      "lang": "en",
+      "path": "assets/voices-v5/56b62509311a3c03ba6b143fd4e617abf64a5ad4.wav"
+    },
+    {
+      "key": "cce99149f27ec4254017e8ff3048abaa30bf7be7",
+      "text": "Let’s look together. A solar panel turns sunlight into power. A solar sail uses light to push a spacecraft. Try: A solar panel.",
+      "lang": "en",
+      "path": "assets/voices-v5/cce99149f27ec4254017e8ff3048abaa30bf7be7.wav"
+    },
+    {
+      "key": "3bca0f86e8cb8852df177a11f7ce9066d83a5493",
+      "text": "A new solar panel for Jade! Tap the plus to fit it.",
+      "lang": "en",
+      "path": "assets/voices-v5/3bca0f86e8cb8852df177a11f7ce9066d83a5493.wav"
+    },
+    {
+      "key": "dd83f77a2d64ec12d7c9ba3667f969c1e622492c",
+      "text": "The open panel makes power for our spare battery. You helped! Play the next mission, or rest for now. The next trip uses one power, one water, and one food.",
+      "lang": "en",
+      "path": "assets/voices-v5/dd83f77a2d64ec12d7c9ba3667f969c1e622492c.wav"
+    },
+    {
+      "key": "6bf7754b0d83174cd62ec2f71b4dd16c9a328976",
+      "text": "Help Balloon get power ready for when it’s dark. Tap Let’s help.",
+      "lang": "en",
+      "path": "assets/voices-v5/6bf7754b0d83174cd62ec2f71b4dd16c9a328976.wav"
+    },
+    {
+      "key": "6fcdfe9a67da22f2498e66fb6659af92de3eb576",
+      "text": "Which way shall we help? Bring Charged Batteries. Use 1 food. Or, Clean and Charge. Use 2 water. ",
+      "lang": "en",
+      "path": "assets/voices-v5/6fcdfe9a67da22f2498e66fb6659af92de3eb576.wav"
+    },
+    {
+      "key": "bbe68b3ca56acbc749af70eb89c65b94e9c340cb",
+      "text": "Find the charged battery box. Tap the gold button.",
+      "lang": "en",
+      "path": "assets/voices-v5/bbe68b3ca56acbc749af70eb89c65b94e9c340cb.wav"
+    },
+    {
+      "key": "124a065e0c14161d7c5de199017fe47862fc51db",
+      "text": "Check the plug’s light. Tap the gold button.",
+      "lang": "en",
+      "path": "assets/voices-v5/124a065e0c14161d7c5de199017fe47862fc51db.wav"
+    },
+    {
+      "key": "8ddc50d517a160104ba9d8b87b202b6771ac7d05",
+      "text": "Plug in the backup power. Tap the gold button.",
+      "lang": "en",
+      "path": "assets/voices-v5/8ddc50d517a160104ba9d8b87b202b6771ac7d05.wav"
+    },
+    {
+      "key": "558a534362c5f080c38a692147a118c667400635",
+      "text": "Solar panels need sunlight. Stored battery power helps us when it is dark. What helps when the sunlight is gone? Power we stored earlier. Or, An unlit panel making power.",
+      "lang": "en",
+      "path": "assets/voices-v5/558a534362c5f080c38a692147a118c667400635.wav"
+    },
+    {
+      "key": "3b44483b890158b0e47d183e8d7622b3fdd67537",
+      "text": "Let’s look together. Solar panels need sunlight. Stored battery power helps us when it is dark. Try: Power we stored earlier.",
+      "lang": "en",
+      "path": "assets/voices-v5/3b44483b890158b0e47d183e8d7622b3fdd67537.wav"
+    },
+    {
+      "key": "4d4b4f65e5274885b75750c5821e774c9a8593a9",
+      "text": "Our helper brings stored power and uses a snack. You helped! Play the next mission, or rest for now. The next trip uses one power, one water, and one food.",
+      "lang": "en",
+      "path": "assets/voices-v5/4d4b4f65e5274885b75750c5821e774c9a8593a9.wav"
+    },
+    {
+      "key": "0fb3eef6f229b63ca63c1ac753f351dbb8d20cd7",
+      "text": "Help Bread get Jade’s last part ready: her warm coat! Tap Let’s help.",
+      "lang": "en",
+      "path": "assets/voices-v5/0fb3eef6f229b63ca63c1ac753f351dbb8d20cd7.wav"
+    },
+    {
+      "key": "414181b77fbe83e8dc69844213b72eb206345f54",
+      "text": "Which way shall we help? Use the Cutter. Use 1 power. Or, Make It Together. Use 1 water and 1 food. ",
+      "lang": "en",
+      "path": "assets/voices-v5/414181b77fbe83e8dc69844213b72eb206345f54.wav"
+    },
+    {
+      "key": "d3b9a0d7810ea93958265fef57e19526f89b3255",
+      "text": "Lay out Jade’s special coat. Tap the gold button.",
+      "lang": "en",
+      "path": "assets/voices-v5/d3b9a0d7810ea93958265fef57e19526f89b3255.wav"
+    },
+    {
+      "key": "20d80a794c9d89bb03208eb7c3adfec0e62033e3",
+      "text": "Turn on the pattern cutter. Tap the gold button.",
+      "lang": "en",
+      "path": "assets/voices-v5/20d80a794c9d89bb03208eb7c3adfec0e62033e3.wav"
+    },
+    {
+      "key": "207490fe6e71691d7690aa3a987efa798a1051c1",
+      "text": "Mark the plugs. Keep them clear. Tap the gold button.",
+      "lang": "en",
+      "path": "assets/voices-v5/207490fe6e71691d7690aa3a987efa798a1051c1.wav"
+    },
+    {
+      "key": "60af80e6769ee77f06404d9def52cd38872f8dde",
+      "text": "Jade’s coat slows heat moving in or out. It does not make power. What does Jade’s special coat do? Make power from nothing. Or, Slow heat moving in or out.",
+      "lang": "en",
+      "path": "assets/voices-v5/60af80e6769ee77f06404d9def52cd38872f8dde.wav"
+    },
+    {
+      "key": "f07db8081960a511a526e245db4c0219ed6e4fe5",
+      "text": "Let’s look together. Jade’s coat slows heat moving in or out. It does not make power. Try: Slow heat moving in or out.",
+      "lang": "en",
+      "path": "assets/voices-v5/f07db8081960a511a526e245db4c0219ed6e4fe5.wav"
+    },
+    {
+      "key": "60625e243e5ef41183475618435ae858505326f2",
+      "text": "A new warm coat for Jade! Tap the plus to fit it.",
+      "lang": "en",
+      "path": "assets/voices-v5/60625e243e5ef41183475618435ae858505326f2.wav"
+    },
+    {
+      "key": "7aa386d4601f29a337fe156ab7b2bc7c8c5f2652",
+      "text": "The coat fits. We leave the plugs clear. You helped! Play the next mission, or rest for now. The next trip uses one power, one water, and one food.",
+      "lang": "en",
+      "path": "assets/voices-v5/7aa386d4601f29a337fe156ab7b2bc7c8c5f2652.wav"
+    },
+    {
+      "key": "764008eac45e2781728fc46d94532e0024a73653",
+      "text": "Help Flyer test Jade’s radio and mark the way home. Tap Let’s help.",
+      "lang": "en",
+      "path": "assets/voices-v5/764008eac45e2781728fc46d94532e0024a73653.wav"
+    },
+    {
+      "key": "565892317c6d812566116af854e232fe0106e0b6",
+      "text": "Which way shall we help? Test the Radio. Use 1 power. Or, Walk the Path. Use 1 water and 1 food. ",
+      "lang": "en",
+      "path": "assets/voices-v5/565892317c6d812566116af854e232fe0106e0b6.wav"
+    },
+    {
+      "key": "a0f2bb74c4b5d713b4e9324d31e829579ba38b43",
+      "text": "Connect Jade’s test power. Tap the gold button.",
+      "lang": "en",
+      "path": "assets/voices-v5/a0f2bb74c4b5d713b4e9324d31e829579ba38b43.wav"
+    },
+    {
+      "key": "acf901da0c83c5170240ef29a2993d76e388fc8c",
+      "text": "Press the radio test button. Tap the gold button.",
+      "lang": "en",
+      "path": "assets/voices-v5/acf901da0c83c5170240ef29a2993d76e388fc8c.wav"
+    },
+    {
+      "key": "89c8c2f083adcdb563003414582a33b7e9925a5f",
+      "text": "Put the light by the turn. Tap the gold button.",
+      "lang": "en",
+      "path": "assets/voices-v5/89c8c2f083adcdb563003414582a33b7e9925a5f.wav"
+    },
+    {
+      "key": "e18a4d573c769d65b8543f9cc785b18e0a8461cd",
+      "text": "Jade’s solar panel makes power. Her battery stores power for later. How do the panel and battery help? Make power and store it. Or, Work forever without any energy.",
+      "lang": "en",
+      "path": "assets/voices-v5/e18a4d573c769d65b8543f9cc785b18e0a8461cd.wav"
+    },
+    {
+      "key": "7fb608404b0b5fae0ec56858c859f027184e4c80",
+      "text": "Let’s look together. Jade’s solar panel makes power. Her battery stores power for later. Try: Make power and store it.",
+      "lang": "en",
+      "path": "assets/voices-v5/7fb608404b0b5fae0ec56858c859f027184e4c80.wav"
+    },
+    {
+      "key": "1db11a3a06e4c35987034ff0c45f16497004c7be",
+      "text": "Jade’s radio works. The path light is ready! You helped! Play the next mission, or rest for now. The next trip uses one power, one water, and one food.",
+      "lang": "en",
+      "path": "assets/voices-v5/1db11a3a06e4c35987034ff0c45f16497004c7be.wav"
+    },
+    {
+      "key": "fd612c11262f9b78e1211ee2e56dc8263f99d68e",
+      "text": "Jade is ready! Help our pals get her home. Tap Let’s help.",
+      "lang": "en",
+      "path": "assets/voices-v5/fd612c11262f9b78e1211ee2e56dc8263f99d68e.wav"
+    },
+    {
+      "key": "a323d7cdf510a092cb4f74a775be50fcd0ce056b",
+      "text": "Which way shall we help? Use Guide Lights. Use 1 power. Or, Walk With Jade. Use 1 water and 1 food. ",
+      "lang": "en",
+      "path": "assets/voices-v5/a323d7cdf510a092cb4f74a775be50fcd0ce056b.wav"
+    },
+    {
+      "key": "fb098f140679fb706e4b2be928d399fd81e42967",
+      "text": "Check the wheels and plugs. Tap the gold button.",
+      "lang": "en",
+      "path": "assets/voices-v5/fb098f140679fb706e4b2be928d399fd81e42967.wav"
+    },
+    {
+      "key": "27bc2d258ef253af03d111e40a363308a247e149",
+      "text": "Turn on the path lights. Tap the gold button.",
+      "lang": "en",
+      "path": "assets/voices-v5/27bc2d258ef253af03d111e40a363308a247e149.wav"
+    },
+    {
+      "key": "7ad5d680cd18402056382f2e22108f838fa243de",
+      "text": "Move the test stand away. Tap the gold button.",
+      "lang": "en",
+      "path": "assets/voices-v5/7ad5d680cd18402056382f2e22108f838fa243de.wav"
+    },
+    {
+      "key": "cd9f6218e87984d17c14f8dd6b55d4356c78bced",
+      "text": "We check the path before Jade drives. We follow safe markers, one at a time. How should we guide Jade home? Rush without looking. Or, Follow the safe path markers.",
+      "lang": "en",
+      "path": "assets/voices-v5/cd9f6218e87984d17c14f8dd6b55d4356c78bced.wav"
+    },
+    {
+      "key": "c753391f2d85b9019857fde98528720645ad2d5f",
+      "text": "Let’s look together. We check the path before Jade drives. We follow safe markers, one at a time. Try: Follow the safe path markers.",
+      "lang": "en",
+      "path": "assets/voices-v5/c753391f2d85b9019857fde98528720645ad2d5f.wav"
+    },
+    {
+      "key": "8cddae0c4ec94691a3d3c607b36788df6ce1dcd3",
+      "text": "The stand moves away. Lights mark the safe path. You helped! Let’s bring Jade home.",
+      "lang": "en",
+      "path": "assets/voices-v5/8cddae0c4ec94691a3d3c607b36788df6ce1dcd3.wav"
+    },
+    {
+      "key": "e533c2205b4910ded17c420332101eca53a5df91",
+      "text": "Let’s go around the big crater. Tap the gold button.",
+      "lang": "en",
+      "path": "assets/voices-v5/e533c2205b4910ded17c420332101eca53a5df91.wav"
+    },
+    {
+      "key": "3a67c44618471cccf544de5f362725690a29e444",
+      "text": "Follow the light. Our pals are near! Tap the gold button.",
+      "lang": "en",
+      "path": "assets/voices-v5/3a67c44618471cccf544de5f362725690a29e444.wav"
+    },
+    {
+      "key": "9d98528156ba1671bc38bb8abdb1f4cc852d75ff",
+      "text": "Our pals are waiting. Let’s go home! Tap the gold button.",
+      "lang": "en",
+      "path": "assets/voices-v5/9d98528156ba1671bc38bb8abdb1f4cc852d75ff.wav"
+    },
+    {
+      "key": "3fd0ee304e87d5d6e240e98a4bf054a2690c4984",
+      "text": "Jade is home! You helped us. Thank you, friend!",
+      "lang": "en",
+      "path": "assets/voices-v5/3fd0ee304e87d5d6e240e98a4bf054a2690c4984.wav"
+    },
+    {
+      "key": "79d3e9d7423399166c57358735930ca5ed98e4e4",
+      "text": "Pick up the spare battery. Tap the gold button.",
+      "lang": "en",
+      "path": "assets/voices-v5/79d3e9d7423399166c57358735930ca5ed98e4e4.wav"
+    },
+    {
+      "key": "d540cd571fe0fd94a58e2cda4a67dcd07aeb01e3",
+      "text": "Pack a snack for our helper. Tap the gold button.",
+      "lang": "en",
+      "path": "assets/voices-v5/d540cd571fe0fd94a58e2cda4a67dcd07aeb01e3.wav"
+    },
+    {
+      "key": "3f4b6ff16ce93583d760ad687a398c58f71dbb9b",
+      "text": "Plug it into the workbench. Tap the gold button.",
+      "lang": "en",
+      "path": "assets/voices-v5/3f4b6ff16ce93583d760ad687a398c58f71dbb9b.wav"
+    },
+    {
+      "key": "56d11cae106b662b48779a22e5b81a5d10613705",
+      "text": "The battery lights our bench. Our helper has a snack. You helped! Play the next mission, or rest for now. The next trip uses one power, one water, and one food.",
+      "lang": "en",
+      "path": "assets/voices-v5/56d11cae106b662b48779a22e5b81a5d10613705.wav"
+    },
+    {
+      "key": "527bc36e00b73cbb4107d163b2e8165ebabd0115",
+      "text": "Turn off the leaking pipe. Tap the gold button.",
+      "lang": "en",
+      "path": "assets/voices-v5/527bc36e00b73cbb4107d163b2e8165ebabd0115.wav"
+    },
+    {
+      "key": "d2badfff6c65cf394de2b24a83c84ce00f8e424a",
+      "text": "Fit the pipe. Clean the water. Tap the gold button.",
+      "lang": "en",
+      "path": "assets/voices-v5/d2badfff6c65cf394de2b24a83c84ce00f8e424a.wav"
+    },
+    {
+      "key": "573dc58ff7b743876975233c856be7961437e38d",
+      "text": "Check the water and pipe. Tap the gold button.",
+      "lang": "en",
+      "path": "assets/voices-v5/573dc58ff7b743876975233c856be7961437e38d.wav"
+    },
+    {
+      "key": "0fbb9b0f6c9e4d582ca886654c069f7f93b80cb1",
+      "text": "We use more power to clean more water. You helped! Play the next mission, or rest for now. The next trip uses one power, one water, and one food.",
+      "lang": "en",
+      "path": "assets/voices-v5/0fbb9b0f6c9e4d582ca886654c069f7f93b80cb1.wav"
+    },
+    {
+      "key": "37389561b6ba1ec7d431aee6da5bcccb0b1818d4",
+      "text": "Move the tray under the light. Tap the gold button.",
+      "lang": "en",
+      "path": "assets/voices-v5/37389561b6ba1ec7d431aee6da5bcccb0b1818d4.wav"
+    },
+    {
+      "key": "7fd9bedb5b9f6ce5a5c9932d090b07b8de2c7c45",
+      "text": "Turn on the plant light. Tap the gold button.",
+      "lang": "en",
+      "path": "assets/voices-v5/7fd9bedb5b9f6ce5a5c9932d090b07b8de2c7c45.wav"
+    },
+    {
+      "key": "324aa024fc432516448db08a27efb445afb45901",
+      "text": "Pick the leaves already grown. Tap the gold button.",
+      "lang": "en",
+      "path": "assets/voices-v5/324aa024fc432516448db08a27efb445afb45901.wav"
+    },
+    {
+      "key": "674810277b0dd06a46a1cd3f90790c2861c99a2a",
+      "text": "We use power for light and save our water. You helped! Play the next mission, or rest for now. The next trip uses one power, one water, and one food.",
+      "lang": "en",
+      "path": "assets/voices-v5/674810277b0dd06a46a1cd3f90790c2861c99a2a.wav"
+    },
+    {
+      "key": "7a23b620f82493e3d77ff5944e61a39383490e9d",
+      "text": "Lay out the carrying mat. Tap the gold button.",
+      "lang": "en",
+      "path": "assets/voices-v5/7a23b620f82493e3d77ff5944e61a39383490e9d.wav"
+    },
+    {
+      "key": "4dece06c2a7bcd5e4a8500fcd2bbb6e1cd7cfd57",
+      "text": "Roll the wheels together. Tap the gold button.",
+      "lang": "en",
+      "path": "assets/voices-v5/4dece06c2a7bcd5e4a8500fcd2bbb6e1cd7cfd57.wav"
+    },
+    {
+      "key": "398bf229cce839724daac440b8302e1b33921550",
+      "text": "Set out water and a snack. Tap the gold button.",
+      "lang": "en",
+      "path": "assets/voices-v5/398bf229cce839724daac440b8302e1b33921550.wav"
+    },
+    {
+      "key": "1f9a22731606133b468860d8a5f64e44f102ffb8",
+      "text": "Our pals save power. They need water and a snack. You helped! Play the next mission, or rest for now. The next trip uses one power, one water, and one food.",
+      "lang": "en",
+      "path": "assets/voices-v5/1f9a22731606133b468860d8a5f64e44f102ffb8.wav"
+    },
+    {
+      "key": "4c7b69dcc736b324811b1d226ee4ce46fa539a42",
+      "text": "Put the trip on hold. Tap the gold button.",
+      "lang": "en",
+      "path": "assets/voices-v5/4c7b69dcc736b324811b1d226ee4ce46fa539a42.wav"
+    },
+    {
+      "key": "843cbc5a35ae61b8b65060196405bcc04ecbc184",
+      "text": "Check our home’s thick shield. Tap the gold button.",
+      "lang": "en",
+      "path": "assets/voices-v5/843cbc5a35ae61b8b65060196405bcc04ecbc184.wav"
+    },
+    {
+      "key": "56afdf8d85e07ddbe9509994f2e3df730deb5de2",
+      "text": "Share water and food inside. Tap the gold button.",
+      "lang": "en",
+      "path": "assets/voices-v5/56afdf8d85e07ddbe9509994f2e3df730deb5de2.wav"
+    },
+    {
+      "key": "78727ae998ee7ea3ae29862b5b8956d4a466de5d",
+      "text": "Our pals stay home with water and food. You helped! Play the next mission, or rest for now. The next trip uses one power, one water, and one food.",
+      "lang": "en",
+      "path": "assets/voices-v5/78727ae998ee7ea3ae29862b5b8956d4a466de5d.wav"
+    },
+    {
+      "key": "4d353e24e98db1424f012cb5d88dea38b8a3e834",
+      "text": "Put the spare battery on board. Tap the gold button.",
+      "lang": "en",
+      "path": "assets/voices-v5/4d353e24e98db1424f012cb5d88dea38b8a3e834.wav"
+    },
+    {
+      "key": "dbd95cec163cfb0ece10ec6cbbcce4ed00db3748",
+      "text": "Push it over. Plug it in. Tap the gold button.",
+      "lang": "en",
+      "path": "assets/voices-v5/dbd95cec163cfb0ece10ec6cbbcce4ed00db3748.wav"
+    },
+    {
+      "key": "46aa210b0c81a6e069d3a949c8a4aa15b69acf2b",
+      "text": "Our pals bring power. They use water and food. You helped! Play the next mission, or rest for now. The next trip uses one power, one water, and one food.",
+      "lang": "en",
+      "path": "assets/voices-v5/46aa210b0c81a6e069d3a949c8a4aa15b69acf2b.wav"
+    },
+    {
+      "key": "39b153f4aff60315cd3a9eb46a914f9fc9bbe26a",
+      "text": "Open the stored food list. Tap the gold button.",
+      "lang": "en",
+      "path": "assets/voices-v5/39b153f4aff60315cd3a9eb46a914f9fc9bbe26a.wav"
+    },
+    {
+      "key": "cc513f217f100d42c0dea7ba07422656e82083f2",
+      "text": "Turn on the food cooler. Tap the gold button.",
+      "lang": "en",
+      "path": "assets/voices-v5/cc513f217f100d42c0dea7ba07422656e82083f2.wav"
+    },
+    {
+      "key": "602cdcb6b1e5e5e0c3fd544cf2366f8b80bcd872",
+      "text": "Pack the food we stored. Tap the gold button.",
+      "lang": "en",
+      "path": "assets/voices-v5/602cdcb6b1e5e5e0c3fd544cf2366f8b80bcd872.wav"
+    },
+    {
+      "key": "632d49840c60cac06a881f5b7864825e3fd724bc",
+      "text": "We use power to chill food and save our water. You helped! Play the next mission, or rest for now. The next trip uses one power, one water, and one food.",
+      "lang": "en",
+      "path": "assets/voices-v5/632d49840c60cac06a881f5b7864825e3fd724bc.wav"
+    },
+    {
+      "key": "5117228741b2a0c851b6a8cc12a9b4295fc3e03b",
+      "text": "Lay the mat. Pack our supplies. Tap the gold button.",
+      "lang": "en",
+      "path": "assets/voices-v5/5117228741b2a0c851b6a8cc12a9b4295fc3e03b.wav"
+    },
+    {
+      "key": "be2a9a7936596ca31910c9e20f64998b6084788a",
+      "text": "Open the panel together. Tap the gold button.",
+      "lang": "en",
+      "path": "assets/voices-v5/be2a9a7936596ca31910c9e20f64998b6084788a.wav"
+    },
+    {
+      "key": "4fd9c32d111c8ee87c9e0e8b5b5ee65ed320bc0b",
+      "text": "Connect the battery to store power. Tap the gold button.",
+      "lang": "en",
+      "path": "assets/voices-v5/4fd9c32d111c8ee87c9e0e8b5b5ee65ed320bc0b.wav"
+    },
+    {
+      "key": "2995d9df31a124783f0774d09a55ba6dbe869a4f",
+      "text": "Our pals open the panel, then have water and food. You helped! Play the next mission, or rest for now. The next trip uses one power, one water, and one food.",
+      "lang": "en",
+      "path": "assets/voices-v5/2995d9df31a124783f0774d09a55ba6dbe869a4f.wav"
+    },
+    {
+      "key": "c1aa9518198ede1f9d0403b2da92ca5bc7df8336",
+      "text": "Check tools. Clean the panel. Tap the gold button.",
+      "lang": "en",
+      "path": "assets/voices-v5/c1aa9518198ede1f9d0403b2da92ca5bc7df8336.wav"
+    },
+    {
+      "key": "923c1d1a64fa6fb2a49d4ed3b55d0bfc0f6e4a2e",
+      "text": "The clean panel charges batteries. Our helpers use drinking water. You helped! Play the next mission, or rest for now. The next trip uses one power, one water, and one food.",
+      "lang": "en",
+      "path": "assets/voices-v5/923c1d1a64fa6fb2a49d4ed3b55d0bfc0f6e4a2e.wav"
+    },
+    {
+      "key": "f0203635c43769cebde6fbeed198642cc8aa2405",
+      "text": "Open the safe cutting pattern. Tap the gold button.",
+      "lang": "en",
+      "path": "assets/voices-v5/f0203635c43769cebde6fbeed198642cc8aa2405.wav"
+    },
+    {
+      "key": "004c50b2633370e19459f5ac1f87953b189c5472",
+      "text": "Line up the coat together. Tap the gold button.",
+      "lang": "en",
+      "path": "assets/voices-v5/004c50b2633370e19459f5ac1f87953b189c5472.wav"
+    },
+    {
+      "key": "dd2146b5e12837b5edf86045df39c8873735312f",
+      "text": "Mark plugs. Set out our supplies. Tap the gold button.",
+      "lang": "en",
+      "path": "assets/voices-v5/dd2146b5e12837b5edf86045df39c8873735312f.wav"
+    },
+    {
+      "key": "e7cde46ce577f4e9ff5fa5823e3aa5cb3b62e29a",
+      "text": "Our pals save power. They have water and food. You helped! Play the next mission, or rest for now. The next trip uses one power, one water, and one food.",
+      "lang": "en",
+      "path": "assets/voices-v5/e7cde46ce577f4e9ff5fa5823e3aa5cb3b62e29a.wav"
+    },
+    {
+      "key": "c13090d6feb9175b5712a19179e7e1090ff769df",
+      "text": "Fit the path light’s battery. Tap the gold button.",
+      "lang": "en",
+      "path": "assets/voices-v5/c13090d6feb9175b5712a19179e7e1090ff769df.wav"
+    },
+    {
+      "key": "9edfb32668d889c62205faab362388a8f2ddb04a",
+      "text": "Carry supplies to the turn. Tap the gold button.",
+      "lang": "en",
+      "path": "assets/voices-v5/9edfb32668d889c62205faab362388a8f2ddb04a.wav"
+    },
+    {
+      "key": "c14af0adc3c137865562abaed45ecc91dc831f2e",
+      "text": "Press the nearby radio test button. Tap the gold button.",
+      "lang": "en",
+      "path": "assets/voices-v5/c14af0adc3c137865562abaed45ecc91dc831f2e.wav"
+    },
+    {
+      "key": "f628c579dd034a5e83f8059e9c47d09cf90e6590",
+      "text": "Our pals check the path and test the radio. You helped! Play the next mission, or rest for now. The next trip uses one power, one water, and one food.",
+      "lang": "en",
+      "path": "assets/voices-v5/f628c579dd034a5e83f8059e9c47d09cf90e6590.wav"
+    },
+    {
+      "key": "c60e9ca886df547d85ec8a648c6e53087d0a24bd",
+      "text": "Check the wheels turn freely. Tap the gold button.",
+      "lang": "en",
+      "path": "assets/voices-v5/c60e9ca886df547d85ec8a648c6e53087d0a24bd.wav"
+    },
+    {
+      "key": "ca9fdc62d4b8ec2839b95db359830189b5c6231c",
+      "text": "Pack water and food. Tap the gold button.",
+      "lang": "en",
+      "path": "assets/voices-v5/ca9fdc62d4b8ec2839b95db359830189b5c6231c.wav"
+    },
+    {
+      "key": "ecb0812a300b8acefc7035c9f0c489f48f77b483",
+      "text": "Take our pals to the markers. Tap the gold button.",
+      "lang": "en",
+      "path": "assets/voices-v5/ecb0812a300b8acefc7035c9f0c489f48f77b483.wav"
+    },
+    {
+      "key": "1b1af72e09787ab44bae03bf165465c88b05cc0e",
+      "text": "Our pals have supplies and wait by the safe path. You helped! Let’s bring Jade home.",
+      "lang": "en",
+      "path": "assets/voices-v5/1b1af72e09787ab44bae03bf165465c88b05cc0e.wav"
+    }
+  ]
+}
